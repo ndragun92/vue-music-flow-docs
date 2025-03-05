@@ -1,6 +1,85 @@
 <template>
   <Body class="scrollbar" />
   <div class="min-h-svh bg-primary-dark text-primary-typography">
+    <div
+      class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:before:flex-1 sm:px-3.5"
+    >
+      <div
+        class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="
+            clip-path: polygon(
+              74.8% 41.9%,
+              97.2% 73.2%,
+              100% 34.9%,
+              92.5% 0.4%,
+              87.5% 0%,
+              75% 28.6%,
+              58.5% 54.6%,
+              50.1% 56.8%,
+              46.9% 44%,
+              48.3% 17.4%,
+              24.7% 53.9%,
+              0% 27.9%,
+              11.9% 74.2%,
+              24.9% 54.1%,
+              68.6% 100%,
+              74.8% 41.9%
+            );
+          "
+        />
+      </div>
+      <div
+        class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+          style="
+            clip-path: polygon(
+              74.8% 41.9%,
+              97.2% 73.2%,
+              100% 34.9%,
+              92.5% 0.4%,
+              87.5% 0%,
+              75% 28.6%,
+              58.5% 54.6%,
+              50.1% 56.8%,
+              46.9% 44%,
+              48.3% 17.4%,
+              24.7% 53.9%,
+              0% 27.9%,
+              11.9% 74.2%,
+              24.9% 54.1%,
+              68.6% 100%,
+              74.8% 41.9%
+            );
+          "
+        />
+      </div>
+      <p class="text-sm/6 text-primary">
+        This is <strong>DEMO</strong> implementation of
+        <a
+          href="https://www.npmjs.com/package/vue-music-flow"
+          target="_blank"
+          class="font-semibold hover:underline"
+          >vue-music-flow</a
+        >
+        package
+      </p>
+      <div class="flex flex-1 justify-end text-sm/6 text-primary">
+        <nuxt-link
+          :to="{ name: 'docs' }"
+          class="whitespace-nowrap font-semibold hover:underline"
+          >Click here to visit docs&nbsp;<span aria-hidden="true"
+            >&rarr;</span
+          ></nuxt-link
+        >
+      </div>
+    </div>
     <section
       class="relative overflow-auto border-b h-[400px] border-primary-border"
     >
@@ -74,7 +153,7 @@
           <li
             v-for="(track, trackIndex) in tracks"
             :key="track.id"
-            class="flex items-center gap-4 lg:gap-8 px-5 flex-col lg:flex-row border border-primary-border bg-primary/50 lg:bg-transparent lg:border-none p-4 lg:p-0"
+            class="flex flex-col items-center gap-4 border p-4 px-5 border-primary-border bg-primary/50 lg:flex-row lg:gap-8 lg:border-none lg:bg-transparent lg:p-0"
             :class="{
               '!bg-secondary/50 lg:!bg-secondary/25':
                 returnTrack?.id === track.id,
@@ -89,7 +168,7 @@
               />
             </div>
             <div
-              class="flex lg:w-8 items-center gap-2 text-secondary-typography"
+              class="flex items-center gap-2 text-secondary-typography lg:w-8"
             >
               <button
                 class="cursor-pointer hover:text-primary-hover"
@@ -111,25 +190,25 @@
               </h4>
             </div>
             <div
-              class="flex lg:w-80 items-center gap-2 text-secondary-typography"
+              class="flex items-center gap-2 text-secondary-typography lg:w-80"
             >
               <Icon name="mdi:user" size="20" />
               <span>{{ track.artist }}</span>
             </div>
             <div
-              class="flex lg:w-40 items-center gap-2 text-secondary-typography"
+              class="flex items-center gap-2 text-secondary-typography lg:w-40"
             >
               <Icon name="mdi:headphones" size="20" />
               <span><ElNumberFlow v-model="track.original.plays" /></span>
             </div>
             <div
-              class="flex lg:w-40 items-center gap-2 text-secondary-typography"
+              class="flex items-center gap-2 text-secondary-typography lg:w-40"
             >
               <Icon name="mdi:folder-music" size="20" />
               <span>{{ track.original?.genre || "No genre" }}</span>
             </div>
             <div
-              class="flex lg:w-20 items-center gap-2 text-secondary-typography"
+              class="flex items-center gap-2 text-secondary-typography lg:w-20"
             >
               <Icon name="mdi:clock" size="20" />
               <span>03:24</span>

@@ -96,9 +96,9 @@
         class="absolute inset-0 z-10 mx-auto flex w-full items-center p-12 max-w-[1920px]"
       >
         <div class="space-y-2 lg:space-y-4">
-          <h1 class="text-lg lg:text-xl font-semibold">Top Playlist</h1>
+          <h1 class="text-lg lg:text-xl font-semibold">Top Album</h1>
           <p class="text-3xl lg:text-5xl uppercase">
-            <strong>NCS Music</strong>
+            <strong>EDM Music</strong>
             changes the world <br />
             because it changes <strong>people</strong>
           </p>

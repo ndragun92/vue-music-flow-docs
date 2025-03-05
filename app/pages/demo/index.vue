@@ -348,6 +348,13 @@ const albums: AlbumData[] = [
     album: "Lofi ChillHop",
     slug: "chill",
   },
+  {
+    id: 4,
+    artwork: "/images/pop-dance.jpg",
+    genre: "Pop Dance",
+    album: "Rhythm Radiance",
+    slug: "pop-dance",
+  },
 ];
 
 const route = useRoute();

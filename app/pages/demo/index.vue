@@ -93,7 +93,7 @@
         class="absolute inset-0 bg-linear-to-t from-primary-dark to-primary-dark/25"
       />
       <div
-        class="absolute inset-0 z-10 mx-auto flex w-full items-center p-12 max-w-[1920px]"
+        class="absolute inset-0 z-10 mx-auto flex w-full items-center p-8 lg:p-12 max-w-[1920px]"
       >
         <div class="space-y-2 lg:space-y-4">
           <h1 class="text-lg lg:text-xl font-semibold">Top Album</h1>
@@ -108,10 +108,14 @@
           <div class="pt-6">
             <button
               type="button"
-              class="cursor-pointer rounded-full bg-violet-600 px-8 py-3 text-xl font-semibold hover:bg-violet-500"
-              @click="onPlayAsPlaylist(tracks)"
+              class="cursor-pointer flex items-center gap-2 rounded-full bg-violet-600 px-8 py-3 text-sm lg:!text-xl font-semibold hover:bg-violet-500"
+              @click="onPlayAlbum({ slug: 'edm' })"
             >
-              Play Now
+              {{
+                routeQueryGenre === "edm"
+                  ? "Playing All World Music Album"
+                  : "Play All World Music Album"
+              }}
             </button>
           </div>
         </div>
@@ -126,7 +130,7 @@
           <button
             v-for="album in albums"
             :key="album.id"
-            class="mr-2 flex-none snap-start space-y-2 rounded p-2 cursor-pointer group"
+            class="mr-2 flex-none snap-start space-y-2 rounded p-2 cursor-pointer group focus:ring-0 focus:outline-none"
             :class="{
               'bg-primary': routeQueryGenre === album.slug,
             }"
@@ -141,7 +145,7 @@
                 format="webp"
               />
               <span
-                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-primary-dark/75 flex items-center justify-center"
+                class="absolute inset-0 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity bg-primary-dark/75 flex items-center justify-center"
               >
                 <Icon
                   v-show="isPlaying && routeQueryGenre === album.slug"
@@ -201,7 +205,7 @@
               class="flex items-center gap-2 text-secondary-typography lg:w-8"
             >
               <button
-                class="cursor-pointer hover:text-primary-hover"
+                class="cursor-pointer hover:text-primary-hover flex items-center justify-center"
                 type="button"
                 :aria-label="isTrackPlaying(track.id) ? 'Pause' : 'Play'"
                 :aria-pressed="isTrackPlaying(track.id) ? 'true' : 'false'"
@@ -354,7 +358,7 @@ const onPlayTrack = (tracks: Data[], track: Data) => {
 };
 
 const router = useRouter();
-const onPlayAlbum = async (album: AlbumData) => {
+const onPlayAlbum = async (album: Pick<AlbumData, "slug">) => {
   tracks.value = await $fetch(`/api/${album.slug}`);
   await router.push({
     name: "demo",

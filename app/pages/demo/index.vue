@@ -355,6 +355,13 @@ const albums: AlbumData[] = [
     album: "Rhythm Radiance",
     slug: "pop-dance",
   },
+  {
+    id: 5,
+    artwork: "/images/metal.jpg",
+    genre: "Metal",
+    album: "Rage Reforged",
+    slug: "metal",
+  },
 ];
 
 const route = useRoute();

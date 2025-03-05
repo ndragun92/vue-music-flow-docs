@@ -362,6 +362,13 @@ const albums: AlbumData[] = [
     album: "Rage Reforged",
     slug: "metal",
   },
+  {
+    id: 6,
+    artwork: "/images/blues.jpg",
+    genre: "Blues",
+    album: "Midnight Groans",
+    slug: "blues",
+  },
 ];
 
 const route = useRoute();

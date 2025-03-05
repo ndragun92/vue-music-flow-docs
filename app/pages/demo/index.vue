@@ -1,6 +1,6 @@
 <template>
   <Body class="scrollbar" />
-  <div class="min-h-svh bg-primary-dark text-primary-typography">
+  <main class="min-h-svh bg-primary-dark text-primary-typography">
     <div
       class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:before:flex-1 sm:px-3.5"
     >
@@ -123,28 +123,37 @@
         <div
           class="flex snap-x items-start overflow-x-scroll pb-4 flex-no-wrap scrolling-touch scrollbar"
         >
-          <div
+          <button
             v-for="n in 10"
             :key="n"
             class="mr-4 flex-none snap-start space-y-2"
+            type="button"
           >
-            <div class="overflow-hidden rounded-lg size-64">
+            <span class="block overflow-hidden rounded-lg size-64">
               <NuxtImg
                 class="rounded-lg border object-cover object-center size-full p-0.5 bg-primary border-primary-border"
                 src="https://ncsmusic.s3.eu-west-1.amazonaws.com/artists/000/000/370/325x325/1597166013_j760lO0Sx4_Razihel.png"
                 alt="Album"
                 format="webp"
               />
-            </div>
-            <div class="w-64">
-              <h3 class="truncate text-lg font-semibold">
+            </span>
+            <span class="block w-64 text-left">
+              <span
+                class="block truncate text-lg font-semibold"
+                :title="'Heaven or Las Vegas'"
+                :aria-label="'Heaven or Las Vegas'"
+              >
                 Heaven or Las Vegas
-              </h3>
-              <h4 class="truncate text-secondary-typography">
+              </span>
+              <span
+                class="block truncate text-secondary-typography"
+                :title="'Cocteau Twins Heaven'"
+                :aria-label="'Cocteau Twins Heaven'"
+              >
                 Cocteau Twins Heaven
-              </h4>
-            </div>
-          </div>
+              </span>
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -176,6 +185,8 @@
               <button
                 class="cursor-pointer hover:text-primary-hover"
                 type="button"
+                :aria-label="isTrackPlaying(track.id) ? 'Pause' : 'Play'"
+                :aria-pressed="isTrackPlaying(track.id) ? 'true' : 'false'"
                 @click="onPlayTrack(tracks, track)"
               >
                 <Icon
@@ -187,8 +198,18 @@
               </button>
             </div>
             <div class="min-w-0 flex-1 text-center lg:!text-left">
-              <h3 class="truncate text-lg font-semibold">{{ track.title }}</h3>
-              <h4 class="truncate text-secondary-typography">
+              <h3
+                class="truncate text-lg font-semibold"
+                :title="track.title"
+                :aria-label="track.title"
+              >
+                {{ track.title }}
+              </h3>
+              <h4
+                class="truncate text-secondary-typography"
+                :title="track.album"
+                :aria-label="track.album"
+              >
                 {{ track.album }}
               </h4>
             </div>
@@ -220,6 +241,7 @@
               <button
                 class="cursor-pointer hover:text-primary-hover flex items-center justify-center"
                 type="button"
+                :aria-label="`${track.original.isFavorite ? 'Add to favorites' : 'Remove from favorites'}`"
                 @click="track.original.isFavorite = !track.original.isFavorite"
               >
                 <Icon
@@ -236,11 +258,11 @@
       </div>
     </section>
     <footer
-      class="mt-48 lg:mt-24 border-t py-4 text-center text-sm bg-primary/25 border-primary-border"
+      class="mt-48 lg:mt-24 border-t py-4 text-center text-sm bg-primary/25 border-primary-border text-secondary-typography"
     >
       This demo was created by
       <a
-        class="text-primary-active hover:text-primary-hover"
+        class="text-primary-typography hover:text-primary-hover underline"
         target="_blank"
         href="https://nemanjadragun.com/"
         >Nemanja Dragun</a
@@ -250,7 +272,7 @@
     <client-only>
       <ElMusicFlow />
     </client-only>
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

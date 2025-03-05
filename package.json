@@ -1,5 +1,5 @@
 {
-  "name": "template-nuxt3",
+  "name": "vue-music-flow-docs",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,7 +14,8 @@
     "lint:prettier": "prettier . --check",
     "prettier:fix": "prettier --write --list-different .",
     "lint:fix": "npm run eslint:fix && npm run prettier:fix",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "version": "bash -c 'nvm use $(cat .nvmrc)'"
   },
   "engines": {
     "node": "22.x"

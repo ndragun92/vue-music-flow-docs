@@ -61,7 +61,7 @@
         />
       </div>
       <p class="text-sm/6 text-primary-typography">
-        This is <strong>DEMO</strong> implementation of
+        This is <strong class="animate-pulse">DEMO</strong> implementation of
         <a
           href="https://www.npmjs.com/package/vue-music-flow"
           target="_blank"

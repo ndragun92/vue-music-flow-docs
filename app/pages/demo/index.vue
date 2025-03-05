@@ -94,7 +94,7 @@
               <button
                 class="cursor-pointer hover:text-primary-hover"
                 type="button"
-                @click="onPlayAsPlaylist(tracks, track)"
+                @click="onPlayTrack(tracks, track)"
               >
                 <Icon
                   v-if="isTrackPlaying(track.id)"
@@ -120,7 +120,7 @@
               class="flex lg:w-40 items-center gap-2 text-secondary-typography"
             >
               <Icon name="mdi:headphones" size="20" />
-              <span>{{ track.original?.plays || 0 }}</span>
+              <span><ElNumberFlow v-model="track.original.plays" /></span>
             </div>
             <div
               class="flex lg:w-40 items-center gap-2 text-secondary-typography"
@@ -138,15 +138,13 @@
               <button
                 class="cursor-pointer hover:text-primary-hover"
                 type="button"
-                @click="
-                  track.original!.isFavorite = !track.original!.isFavorite
-                "
+                @click="track.original.isFavorite = !track.original.isFavorite"
               >
                 <Icon
                   name="mdi:heart"
                   size="20"
                   :class="{
-                    'text-red-500': track.original!.isFavorite,
+                    'text-red-500': track.original.isFavorite,
                   }"
                 />
               </button>
@@ -177,7 +175,11 @@
 import "vue-music-flow/dist/vue-music-flow.css";
 import { useMusicFlow, type TMusicFlow } from "vue-music-flow";
 
-const tracks = ref<TMusicFlow[]>([
+type Data = Omit<TMusicFlow, "original"> & {
+  original: { genre: string; plays: number; isFavorite: boolean };
+};
+
+const tracks = ref<Data[]>([
   {
     id: 1,
     audio:
@@ -256,4 +258,11 @@ const tracks = ref<TMusicFlow[]>([
 ]);
 
 const { onPlayAsPlaylist, isTrackPlaying, returnTrack } = useMusicFlow();
+
+const onPlayTrack = (tracks: Data[], track: Data) => {
+  onPlayAsPlaylist(tracks, track);
+  if (track.original?.plays) {
+    (track.original.plays as number) += 1;
+  }
+};
 </script>

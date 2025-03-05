@@ -36,6 +36,7 @@
     "vue-tsc": "^2.2.0"
   },
   "dependencies": {
+    "@number-flow/vue": "^0.4.3",
     "@nuxt/fonts": "^0.10.3",
     "@tailwindcss/vite": "^4.0.9",
     "@vueuse/nuxt": "^12.5.0",

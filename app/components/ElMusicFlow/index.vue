@@ -1,9 +1,7 @@
 <template>
   <MusicFlow
     :options="{
-      // waveColor: '#ffffff',
-      // progressColor: '#ffa045',
-      // height: 50,
+      progressColor: '#a684ff',
       autoplay: true,
     }"
   >
@@ -14,7 +12,7 @@
         aria-label="Mark as favorite"
         @click="onMarkTrackAsFavorite(track)"
       >
-        Add
+        <Icon class="text-red-500" name="mdi:heart" size="20" />
       </button>
     </template>
   </MusicFlow>

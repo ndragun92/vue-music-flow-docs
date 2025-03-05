@@ -2,7 +2,7 @@
   <Body class="scrollbar" />
   <main class="min-h-svh bg-primary-dark text-primary-typography">
     <div
-      class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:before:flex-1 sm:px-3.5"
+      class="relative isolate flex items-center gap-x-6 overflow-hidden bg-primary-dark px-6 py-2.5 sm:before:flex-1 sm:px-3.5"
     >
       <div
         class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
@@ -60,7 +60,7 @@
           "
         />
       </div>
-      <p class="text-sm/6 text-primary">
+      <p class="text-sm/6 text-primary-typography">
         This is <strong>DEMO</strong> implementation of
         <a
           href="https://www.npmjs.com/package/vue-music-flow"
@@ -70,7 +70,7 @@
         >
         package
       </p>
-      <div class="flex flex-1 justify-end text-sm/6 text-primary">
+      <div class="flex flex-1 justify-end text-sm/6 text-primary-typography">
         <nuxt-link
           :to="{ name: 'docs' }"
           class="whitespace-nowrap font-semibold hover:underline"

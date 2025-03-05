@@ -6,7 +6,7 @@ export default defineEventHandler(() => {
       title: "Lunar Breeze",
       artist: "Nujabes",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Lofi, Ambient, Chill",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -20,7 +20,7 @@ export default defineEventHandler(() => {
       title: "Rainy Day",
       artist: "Tomppabeats",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Lofi, Chillhop, Mellow",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -34,7 +34,7 @@ export default defineEventHandler(() => {
       title: "Cat's Dreams",
       artist: "Idealism",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Calm, Cozy, Lofi, Dreams",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -48,7 +48,7 @@ export default defineEventHandler(() => {
       title: "Photograph",
       artist: "Joji",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Mesmerizing, Instrumental",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -62,7 +62,7 @@ export default defineEventHandler(() => {
       title: "Polar Lights",
       artist: "Jinsang",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Chill, Vibes, Lofi",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -76,7 +76,7 @@ export default defineEventHandler(() => {
       title: "Snow",
       artist: "Saib",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Snow, Instrumental",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -90,7 +90,7 @@ export default defineEventHandler(() => {
       title: "Melt",
       artist: "Kudasai",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Beautiful Lofi",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -104,7 +104,7 @@ export default defineEventHandler(() => {
       title: "Aura",
       artist: "Ezzy",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Cosmic Lofi",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -118,7 +118,7 @@ export default defineEventHandler(() => {
       title: "Over The Moon",
       artist: "sadtoi",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Chill, Lofi, Relaxation",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -132,7 +132,7 @@ export default defineEventHandler(() => {
       title: "After You",
       artist: "Sleepy Fish",
       artwork: "/images/chill.jpg",
-      album: "Lofi ChillHop",
+      album: "Moonlit Vibes",
       original: {
         genre: "Relaxing, Chill, Ambient",
         plays: Math.floor(Math.random() * 999) + 1,

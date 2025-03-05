@@ -81,7 +81,7 @@
       </div>
     </div>
     <section
-      class="relative overflow-auto border-b h-[400px] border-primary-border"
+      class="relative overflow-auto border-b h-[400px] lg:!h-[550px] border-primary-border"
     >
       <NuxtImg
         class="object-cover object-bottom size-full"
@@ -180,7 +180,15 @@
       </div>
     </section>
     <section class="container mx-auto p-6 space-y-6">
-      <h2 class="text-lg font-semibold">This week's top #20</h2>
+      <div class="flex justify-between items-center gap-2">
+        <h2 class="text-lg font-semibold">
+          Album
+          <strong class="text-primary-hover">{{ tracks[0]?.album }}</strong>
+        </h2>
+        <div class="text-secondary-typography">
+          {{ tracks.length || 0 }} tracks
+        </div>
+      </div>
       <div>
         <ul class="space-y-4">
           <li

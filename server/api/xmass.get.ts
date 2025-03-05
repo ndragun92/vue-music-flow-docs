@@ -6,7 +6,7 @@ export default defineEventHandler(() => {
       title: "Happy Xmas - Happy New Year 2025",
       artist: "Holly Snowell",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Xmas, Happy Christmas",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -20,7 +20,7 @@ export default defineEventHandler(() => {
       title: "Christmas Piano",
       artist: "Jingle Harmonies",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Xmas, Happy Christmas",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -34,7 +34,7 @@ export default defineEventHandler(() => {
       title: "Happy Xmas - Christmas Music",
       artist: "Noel Winterson",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Santa, Happy Xmas, Xmas",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -49,7 +49,7 @@ export default defineEventHandler(() => {
       title: "Happy Xmas - Jingle Bells - Happy Christmas",
       artist: "Crystal Carols",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Xmas, Happy Christmas",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -63,7 +63,7 @@ export default defineEventHandler(() => {
       title: "Merry Christmas - Happy Xmas",
       artist: "Frosty Serenade",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Merry Christmas, Xmas",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -78,7 +78,7 @@ export default defineEventHandler(() => {
       title: "Christmas Mood Music - Merry Christmas",
       artist: "Gabriel Starlight",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Christmas Mood, Music",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -92,7 +92,7 @@ export default defineEventHandler(() => {
       title: "Christmas Music - Merry Christmas",
       artist: "Evergreen Voices",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Christmas Music",
         plays: Math.floor(Math.random() * 999) + 1,
@@ -106,7 +106,7 @@ export default defineEventHandler(() => {
       title: "Happy Christmas Day",
       artist: "St. Nick's Melod",
       artwork: "/images/xmass.jpg",
-      album: "LudoSoundX",
+      album: "Ludo Sound X",
       original: {
         genre: "Christmas, Holiday",
         plays: Math.floor(Math.random() * 999) + 1,

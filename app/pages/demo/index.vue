@@ -338,8 +338,15 @@ const albums: AlbumData[] = [
     id: 2,
     artwork: "/images/xmass.jpg",
     genre: "Christmas",
-    album: "LudoSoundX",
+    album: "Ludo Sound X",
     slug: "xmass",
+  },
+  {
+    id: 3,
+    artwork: "/images/chill.jpg",
+    genre: "Chill",
+    album: "Lofi ChillHop",
+    slug: "chill",
   },
 ];
 

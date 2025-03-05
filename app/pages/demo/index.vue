@@ -104,7 +104,7 @@
                 <Icon v-else name="mdi:play" size="24" />
               </button>
             </div>
-            <div class="min-w-0 flex-1 text-center lg:text-left">
+            <div class="min-w-0 flex-1 text-center lg:!text-left">
               <h3 class="truncate text-lg font-semibold">{{ track.title }}</h3>
               <h4 class="truncate text-secondary-typography">
                 {{ track.album }}
@@ -120,7 +120,7 @@
               class="flex lg:w-40 items-center gap-2 text-secondary-typography"
             >
               <Icon name="mdi:headphones" size="20" />
-              <span>34,327,850</span>
+              <span>{{ track.original?.plays || 0 }}</span>
             </div>
             <div
               class="flex lg:w-40 items-center gap-2 text-secondary-typography"
@@ -135,7 +135,21 @@
               <span>03:24</span>
             </div>
             <div class="flex items-center gap-2 text-secondary-typography">
-              <Icon class="text-red-500" name="mdi:heart" size="20" />
+              <button
+                class="cursor-pointer hover:text-primary-hover"
+                type="button"
+                @click="
+                  track.original!.isFavorite = !track.original!.isFavorite
+                "
+              >
+                <Icon
+                  name="mdi:heart"
+                  size="20"
+                  :class="{
+                    'text-red-500': track.original!.isFavorite,
+                  }"
+                />
+              </button>
             </div>
           </li>
         </ul>
@@ -163,7 +177,7 @@
 import "vue-music-flow/dist/vue-music-flow.css";
 import { useMusicFlow, type TMusicFlow } from "vue-music-flow";
 
-const tracks: TMusicFlow[] = [
+const tracks = ref<TMusicFlow[]>([
   {
     id: 1,
     audio:
@@ -176,6 +190,7 @@ const tracks: TMusicFlow[] = [
     original: {
       genre: "Country",
       plays: 3000,
+      isFavorite: false,
     },
   },
   {
@@ -189,6 +204,8 @@ const tracks: TMusicFlow[] = [
     album: "Awakenings",
     original: {
       genre: "Hip-Hop / Rap",
+      plays: 54645645,
+      isFavorite: false,
     },
   },
   {
@@ -202,6 +219,8 @@ const tracks: TMusicFlow[] = [
     album: "Awakenings",
     original: {
       genre: "Soundtrack",
+      plays: 54645645,
+      isFavorite: true,
     },
   },
   {
@@ -215,6 +234,8 @@ const tracks: TMusicFlow[] = [
     album: "Even Poets Go to War",
     original: {
       genre: "Heavy Metal",
+      plays: 100,
+      isFavorite: false,
     },
   },
   {
@@ -228,9 +249,11 @@ const tracks: TMusicFlow[] = [
     album: "Yuletide",
     original: {
       genre: "Hip-Hop / Rap",
+      plays: 0,
+      isFavorite: false,
     },
   },
-];
+]);
 
 const { onPlayAsPlaylist, isTrackPlaying, returnTrack } = useMusicFlow();
 </script>

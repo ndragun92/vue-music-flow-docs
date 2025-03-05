@@ -83,10 +83,11 @@
     <section
       class="relative overflow-auto border-b h-[400px] border-primary-border"
     >
-      <img
+      <NuxtImg
         class="object-cover object-bottom size-full"
         src="/images/cover.jpg"
         alt="Hero Image"
+        format="webp"
       />
       <div
         class="absolute inset-0 bg-linear-to-t from-primary-dark to-primary-dark/25"
@@ -128,10 +129,11 @@
             class="mr-4 flex-none snap-start space-y-2"
           >
             <div class="overflow-hidden rounded-lg size-64">
-              <img
+              <NuxtImg
                 class="rounded-lg border object-cover object-center size-full p-0.5 bg-primary border-primary-border"
                 src="https://ncsmusic.s3.eu-west-1.amazonaws.com/artists/000/000/370/325x325/1597166013_j760lO0Sx4_Razihel.png"
                 alt="Album"
+                format="webp"
               />
             </div>
             <div class="w-64">
@@ -161,10 +163,11 @@
           >
             <div class="lg:w-8">#{{ trackIndex + 1 }}</div>
             <div class="size-16">
-              <img
+              <NuxtImg
                 class="rounded-lg border object-cover object-center size-full border-primary-border bg-primary p-0.5"
                 :src="track.artwork"
                 :alt="track.title"
+                format="webp"
               />
             </div>
             <div
@@ -190,32 +193,32 @@
               </h4>
             </div>
             <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-80"
+              class="flex items-center gap-2 text-secondary-typography lg:w-80 text-sm"
             >
               <Icon name="mdi:user" size="20" />
               <span>{{ track.artist }}</span>
             </div>
             <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-40"
+              class="flex items-center gap-2 text-secondary-typography lg:w-40 text-sm"
             >
               <Icon name="mdi:headphones" size="20" />
               <span><ElNumberFlow v-model="track.original.plays" /></span>
             </div>
             <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-40"
+              class="flex items-center gap-2 text-secondary-typography lg:w-40 text-sm"
             >
               <Icon name="mdi:folder-music" size="20" />
-              <span>{{ track.original?.genre || "No genre" }}</span>
+              <span>{{ track.original.genre || "No genre" }}</span>
             </div>
             <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-20"
+              class="flex items-center gap-2 text-secondary-typography lg:w-20 text-sm"
             >
               <Icon name="mdi:clock" size="20" />
-              <span>03:24</span>
+              <span>{{ track.original.duration || 0 }}</span>
             </div>
             <div class="flex items-center gap-2 text-secondary-typography">
               <button
-                class="cursor-pointer hover:text-primary-hover"
+                class="cursor-pointer hover:text-primary-hover flex items-center justify-center"
                 type="button"
                 @click="track.original.isFavorite = !track.original.isFavorite"
               >
@@ -255,86 +258,18 @@ import "vue-music-flow/dist/vue-music-flow.css";
 import { useMusicFlow, type TMusicFlow } from "vue-music-flow";
 
 type Data = Omit<TMusicFlow, "original"> & {
-  original: { genre: string; plays: number; isFavorite: boolean };
+  original: {
+    genre: string;
+    plays: number;
+    isFavorite: boolean;
+    duration: string;
+  };
 };
 
-const tracks = ref<Data[]>([
-  {
-    id: 1,
-    audio:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/5bbf6dac65e26100130505c2_AM18_01_Tree%20of%20Life_lo.mp3",
-    title: "Tree of Life",
-    artist: "Kevin Rix",
-    artwork:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/am18/5bbf5ddc65e261001304e9fe_awakenings.jpg",
-    album: "Awakenings",
-    original: {
-      genre: "Country",
-      plays: 3000,
-      isFavorite: false,
-    },
-  },
-  {
-    id: 2,
-    audio:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/5bbf6dac65e26100130505bc_AM18_03_Breaking Through_lo.mp3",
-    title: "Breaking Through",
-    artist: "Jeff Marsh",
-    artwork:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/am18/5bbf5ddc65e261001304e9fe_awakenings.jpg",
-    album: "Awakenings",
-    original: {
-      genre: "Hip-Hop / Rap",
-      plays: 54645645,
-      isFavorite: false,
-    },
-  },
-  {
-    id: 3,
-    audio:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/5bbf6dac65e26100130505c5_AM18_04_The Fire Within_lo.mp3",
-    title: "The Fire Within",
-    artist: "Kevin Rix",
-    artwork:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/am18/5bbf5ddc65e261001304e9fe_awakenings.jpg",
-    album: "Awakenings",
-    original: {
-      genre: "Soundtrack",
-      plays: 54645645,
-      isFavorite: true,
-    },
-  },
-  {
-    id: 4,
-    audio:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/am120/66c3c5107907a083490abcf1_AM120_01_Prologue%20The%20Way%20of%20Legends_lo.mp3",
-    title: "Prologue: The Way of Legends",
-    artist: "Paul Dinletir",
-    artwork:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/Even%20Poets%20Go%20to%20War_1724106064076.jpg",
-    album: "Even Poets Go to War",
-    original: {
-      genre: "Heavy Metal",
-      plays: 100,
-      isFavorite: false,
-    },
-  },
-  {
-    id: 5,
-    audio:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/no_release_slug/6500dba394d0815e804d2251_AM106_02_Christmas%20Canon_lo.mp3",
-    title: "Christmas Canon",
-    artist: "Paul Dinletir & Noah Putrich",
-    artwork:
-      "https://storage.googleapis.com/cadenzabox-prod-bucket/audiomachine/Yuletide800x_1694555118506.jpg",
-    album: "Yuletide",
-    original: {
-      genre: "Hip-Hop / Rap",
-      plays: 0,
-      isFavorite: false,
-    },
-  },
-]);
+const { data: tracks } = await useFetch<Data[]>("/api/edm", {
+  default: () => [],
+  deep: true,
+});
 
 const { onPlayAsPlaylist, isTrackPlaying, returnTrack } = useMusicFlow();
 

@@ -94,14 +94,14 @@
       <div
         class="absolute inset-0 z-10 mx-auto flex w-full items-center p-12 max-w-[1920px]"
       >
-        <div class="space-y-4">
-          <h1 class="text-xl font-semibold">Top Playlist</h1>
-          <p class="text-5xl uppercase">
+        <div class="space-y-2 lg:space-y-4">
+          <h1 class="text-lg lg:text-xl font-semibold">Top Playlist</h1>
+          <p class="text-3xl lg:text-5xl uppercase">
             <strong>NCS Music</strong>
             changes the world <br />
             because it changes <strong>people</strong>
           </p>
-          <p class="text-lg">
+          <p class="text-base lg:text-lg">
             We aim to achieve our goals by using creative music processes.
           </p>
           <div class="pt-6">
@@ -233,7 +233,7 @@
       </div>
     </section>
     <footer
-      class="mt-24 border-t py-4 text-center text-sm bg-primary/25 border-primary-border"
+      class="mt-48 lg:mt-24 border-t py-4 text-center text-sm bg-primary/25 border-primary-border"
     >
       This demo was created by
       <a

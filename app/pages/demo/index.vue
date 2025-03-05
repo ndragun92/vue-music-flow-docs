@@ -2,7 +2,7 @@
   <Body class="scrollbar" />
   <div class="min-h-svh bg-primary-dark text-primary-typography">
     <section
-      class="relative overflow-auto border-b h-[500px] border-primary-border"
+      class="relative overflow-auto border-b h-[400px] border-primary-border"
     >
       <img
         class="object-cover object-bottom size-full"
@@ -74,12 +74,13 @@
           <li
             v-for="(track, trackIndex) in tracks"
             :key="track.id"
-            class="flex items-center gap-8 px-5"
+            class="flex items-center gap-4 lg:gap-8 px-5 flex-col lg:flex-row border border-primary-border bg-primary/50 lg:bg-transparent lg:border-none p-4 lg:p-0"
             :class="{
-              'bg-secondary/25': returnTrack?.id === track.id,
+              '!bg-secondary/50 lg:!bg-secondary/25':
+                returnTrack?.id === track.id,
             }"
           >
-            <div class="w-8">#{{ trackIndex + 1 }}</div>
+            <div class="lg:w-8">#{{ trackIndex + 1 }}</div>
             <div class="size-16">
               <img
                 class="rounded-lg border object-cover object-center size-full border-primary-border bg-primary p-0.5"
@@ -87,7 +88,9 @@
                 :alt="track.title"
               />
             </div>
-            <div class="flex w-8 items-center gap-2 text-secondary-typography">
+            <div
+              class="flex lg:w-8 items-center gap-2 text-secondary-typography"
+            >
               <button
                 class="cursor-pointer hover:text-primary-hover"
                 type="button"
@@ -101,25 +104,33 @@
                 <Icon v-else name="mdi:play" size="24" />
               </button>
             </div>
-            <div class="min-w-0 flex-1">
+            <div class="min-w-0 flex-1 text-center lg:text-left">
               <h3 class="truncate text-lg font-semibold">{{ track.title }}</h3>
               <h4 class="truncate text-secondary-typography">
                 {{ track.album }}
               </h4>
             </div>
-            <div class="flex w-80 items-center gap-2 text-secondary-typography">
+            <div
+              class="flex lg:w-80 items-center gap-2 text-secondary-typography"
+            >
               <Icon name="mdi:user" size="20" />
               <span>{{ track.artist }}</span>
             </div>
-            <div class="flex w-40 items-center gap-2 text-secondary-typography">
+            <div
+              class="flex lg:w-40 items-center gap-2 text-secondary-typography"
+            >
               <Icon name="mdi:headphones" size="20" />
               <span>34,327,850</span>
             </div>
-            <div class="flex w-40 items-center gap-2 text-secondary-typography">
+            <div
+              class="flex lg:w-40 items-center gap-2 text-secondary-typography"
+            >
               <Icon name="mdi:folder-music" size="20" />
               <span>{{ track.original?.genre || "No genre" }}</span>
             </div>
-            <div class="flex w-20 items-center gap-2 text-secondary-typography">
+            <div
+              class="flex lg:w-20 items-center gap-2 text-secondary-typography"
+            >
               <Icon name="mdi:clock" size="20" />
               <span>03:24</span>
             </div>
@@ -164,6 +175,7 @@ const tracks: TMusicFlow[] = [
     album: "Awakenings",
     original: {
       genre: "Country",
+      plays: 3000,
     },
   },
   {

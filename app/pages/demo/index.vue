@@ -1,4 +1,5 @@
 <template>
+  <Body class="scrollbar" />
   <div class="min-h-svh bg-primary-dark text-primary-typography">
     <section
       class="relative overflow-auto border-b h-[500px] border-primary-border"

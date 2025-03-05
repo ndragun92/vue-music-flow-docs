@@ -1,0 +1,118 @@
+export default defineEventHandler(() => {
+  return [
+    {
+      id: 7,
+      audio: "/audio/xmass/ludo-sound-x/happy-xmas-happy-new-year-2025.mp3",
+      title: "Happy Xmas - Happy New Year 2025",
+      artist: "Holly Snowell",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Xmas, Happy Christmas",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "03:13",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 8,
+      audio: "/audio/xmass/ludo-sound-x/christmas-piano.mp3",
+      title: "Christmas Piano",
+      artist: "Jingle Harmonies",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Xmas, Happy Christmas",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "01:49",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 9,
+      audio: "/audio/xmass/ludo-sound-x/happy-xmas-christmas-music.mp3",
+      title: "Happy Xmas - Christmas Music",
+      artist: "Noel Winterson",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Santa, Happy Xmas, Xmas",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "01:54",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 10,
+      audio:
+        "/audio/xmass/ludo-sound-x/happy-xmas-jingle-bells-happy-christmas.mp3",
+      title: "Happy Xmas - Jingle Bells - Happy Christmas",
+      artist: "Crystal Carols",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Xmas, Happy Christmas",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "01:05",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 11,
+      audio: "/audio/xmass/ludo-sound-x/merry-christmas-happy-xmas.mp3",
+      title: "Merry Christmas - Happy Xmas",
+      artist: "Frosty Serenade",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Merry Christmas, Xmas",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "01:10",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 12,
+      audio:
+        "/audio/xmass/ludo-sound-x/christmas-mood-music-merry-christmas.mp3",
+      title: "Christmas Mood Music - Merry Christmas",
+      artist: "Gabriel Starlight",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Christmas Mood, Music",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "02:00",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 13,
+      audio: "/audio/xmass/ludo-sound-x/christmas-music-merry-christmas.mp3",
+      title: "Christmas Music - Merry Christmas",
+      artist: "Evergreen Voices",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Christmas Music",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "01:34",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+    {
+      id: 14,
+      audio: "/audio/xmass/ludo-sound-x/happy-christmas-day.mp3",
+      title: "Happy Christmas Day",
+      artist: "St. Nick's Melod",
+      artwork: "/images/xmass.jpg",
+      album: "LudoSoundX",
+      original: {
+        genre: "Christmas, Holiday",
+        plays: Math.floor(Math.random() * 999) + 1,
+        duration: "03:53",
+        isFavorite: Math.random() < 0.5,
+      },
+    },
+  ];
+});

@@ -9,9 +9,9 @@ export default defineEventHandler(() => {
       album: "All World Music",
       original: {
         genre: "Dreamy, Slow, EDM",
-        plays: 74,
+        plays: Math.floor(Math.random() * 999) + 1,
         duration: "04:00",
-        isFavorite: false,
+        isFavorite: Math.random() < 0.5,
       },
     },
     {
@@ -24,9 +24,9 @@ export default defineEventHandler(() => {
       album: "All World Music",
       original: {
         genre: "EDM, Electronic",
-        plays: 52,
+        plays: Math.floor(Math.random() * 999) + 1,
         duration: "02:09",
-        isFavorite: true,
+        isFavorite: Math.random() < 0.5,
       },
     },
     {
@@ -38,9 +38,9 @@ export default defineEventHandler(() => {
       album: "All World Music",
       original: {
         genre: "Epic, Fast, Bitwise, EDM",
-        plays: 28,
+        plays: Math.floor(Math.random() * 999) + 1,
         duration: "03:25",
-        isFavorite: true,
+        isFavorite: Math.random() < 0.5,
       },
     },
     {
@@ -52,9 +52,9 @@ export default defineEventHandler(() => {
       album: "All World Music",
       original: {
         genre: "Fast, EDM, Glitchy, Music",
-        plays: 41,
+        plays: Math.floor(Math.random() * 999) + 1,
         duration: "01:20",
-        isFavorite: false,
+        isFavorite: Math.random() < 0.5,
       },
     },
     {
@@ -66,9 +66,9 @@ export default defineEventHandler(() => {
       album: "All World Music",
       original: {
         genre: "High-energy, EDM",
-        plays: 7,
+        plays: Math.floor(Math.random() * 999) + 1,
         duration: "03:24",
-        isFavorite: false,
+        isFavorite: Math.random() < 0.5,
       },
     },
     {
@@ -80,9 +80,9 @@ export default defineEventHandler(() => {
       album: "All World Music",
       original: {
         genre: "Music, Melody, EDM, Fast",
-        plays: 75,
+        plays: Math.floor(Math.random() * 999) + 1,
         duration: "01:44",
-        isFavorite: false,
+        isFavorite: Math.random() < 0.5,
       },
     },
   ];

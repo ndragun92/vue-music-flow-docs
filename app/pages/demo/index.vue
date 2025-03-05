@@ -124,18 +124,36 @@
           class="flex snap-x items-start overflow-x-scroll pb-4 flex-no-wrap scrolling-touch scrollbar"
         >
           <button
-            v-for="n in 10"
-            :key="n"
-            class="mr-4 flex-none snap-start space-y-2"
+            v-for="album in albums"
+            :key="album.id"
+            class="mr-2 flex-none snap-start space-y-2 rounded p-2 cursor-pointer group"
+            :class="{
+              'bg-primary': routeQueryGenre === album.slug,
+            }"
             type="button"
+            @click="onPlayAlbum(album)"
           >
-            <span class="block overflow-hidden rounded-lg size-64">
+            <span class="block overflow-hidden rounded-lg size-64 relative">
               <NuxtImg
                 class="rounded-lg border object-cover object-center size-full p-0.5 bg-primary border-primary-border"
-                src="https://ncsmusic.s3.eu-west-1.amazonaws.com/artists/000/000/370/325x325/1597166013_j760lO0Sx4_Razihel.png"
-                alt="Album"
+                :src="album.artwork"
+                :alt="album.album"
                 format="webp"
               />
+              <span
+                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-primary-dark/75 flex items-center justify-center"
+              >
+                <Icon
+                  v-show="isPlaying && routeQueryGenre === album.slug"
+                  name="mdi:pause"
+                  size="38"
+                />
+                <Icon
+                  v-show="!(isPlaying && routeQueryGenre === album.slug)"
+                  name="mdi:play"
+                  size="38"
+                />
+              </span>
             </span>
             <span class="block w-64 text-left">
               <span
@@ -143,14 +161,14 @@
                 :title="'Heaven or Las Vegas'"
                 :aria-label="'Heaven or Las Vegas'"
               >
-                Heaven or Las Vegas
+                {{ album.album }}
               </span>
               <span
                 class="block truncate text-secondary-typography"
                 :title="'Cocteau Twins Heaven'"
                 :aria-label="'Cocteau Twins Heaven'"
               >
-                Cocteau Twins Heaven
+                {{ album.genre }}
               </span>
             </span>
           </button>
@@ -288,17 +306,65 @@ type Data = Omit<TMusicFlow, "original"> & {
   };
 };
 
-const { data: tracks } = await useFetch<Data[]>("/api/edm", {
-  default: () => [],
-  deep: true,
-});
+type AlbumData = {
+  id: number;
+  artwork: string;
+  genre: string;
+  album: string;
+  slug: string;
+};
 
-const { onPlayAsPlaylist, isTrackPlaying, returnTrack } = useMusicFlow();
+const albums: AlbumData[] = [
+  {
+    id: 1,
+    artwork: "/images/edm.jpg",
+    genre: "EDM",
+    album: "All World Music",
+    slug: "edm",
+  },
+  {
+    id: 2,
+    artwork: "/images/xmass.jpg",
+    genre: "Christmas",
+    album: "LudoSoundX",
+    slug: "xmass",
+  },
+];
+
+const route = useRoute();
+
+const routeQueryGenre = computed(() => (route.query.genre as string) || "edm");
+
+const { data: tracks } = await useFetch<Data[]>(
+  `/api/${routeQueryGenre.value}`,
+  {
+    default: () => [],
+    deep: true,
+  },
+);
+
+const { onPlayAsPlaylist, isTrackPlaying, returnTrack, isPlaying } =
+  useMusicFlow();
 
 const onPlayTrack = (tracks: Data[], track: Data) => {
   onPlayAsPlaylist(tracks, track);
   if (track.original?.plays) {
     (track.original.plays as number) += 1;
+  }
+};
+
+const router = useRouter();
+const onPlayAlbum = async (album: AlbumData) => {
+  tracks.value = await $fetch(`/api/${album.slug}`);
+  await router.push({
+    name: "demo",
+    query: {
+      genre: album.slug,
+    },
+  });
+  await nextTick();
+  if (tracks.value?.length) {
+    onPlayTrack(tracks.value, tracks.value[0]!);
   }
 };
 </script>

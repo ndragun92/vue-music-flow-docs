@@ -17,6 +17,18 @@
         <li>
           <nuxt-link
             :to="{
+              name: 'index',
+            }"
+            class="block border-l pl-4 py-1 border-zinc-800 text-sm text-zinc-400 hover:text-white transition-colors"
+            :class="{
+              '!border-emerald-500 !text-white': routeName === 'index',
+            }"
+            >Overview</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link
+            :to="{
               name: 'getting-started',
             }"
             class="block border-l pl-4 py-1 border-zinc-800 text-sm text-zinc-400 hover:text-white transition-colors"

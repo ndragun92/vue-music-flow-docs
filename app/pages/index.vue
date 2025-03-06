@@ -6,12 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { TNpmRegistry } from "~/types/npm-registry.type";
-
-const { data } = await useFetch<TNpmRegistry>(
-  "https://registry.npmjs.org/vue-music-flow",
-  {
-    key: "npm-registry",
-  },
-);
+const { data } = await useFetch("/api/npm-registry", {
+  key: "npm-registry",
+});
 </script>

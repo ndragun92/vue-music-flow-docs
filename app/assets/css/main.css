@@ -9,6 +9,16 @@
     --color-primary-active: oklch(0.702 0.183 293.541);
     --color-primary-typography: oklch(0.985 0 0);
     --color-secondary-typography: oklch(0.708 0 0);
+
+    --animate-blink: blink 1s steps(2, start) infinite;
+    @keyframes blink {
+        0%, 50% {
+            opacity: 1;
+        }
+        50%, 100% {
+            opacity: 0;
+        }
+    }
 }
 
 :root, :host {

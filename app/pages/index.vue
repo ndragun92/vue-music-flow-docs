@@ -1,9 +1,9 @@
 <template>
-  <div class="@container container mx-auto mt-8">
+  <div class="@container container mx-auto">
+    <h2 class="text-3xl font-semibold mb-4">Overview</h2>
     <div class="space-y-2">
-      <h1 class="text-xl font-semibold">{{ data?._id }}</h1>
       <div class="flex items-center gap-0.5 text-sm">
-        <div>{{ data?.["dist-tags"]?.latest }}</div>
+        <div>{{ data?.["dist-tags"]?.latest }} is latest version</div>
         <div><Icon name="mdi:dot" size="24" /></div>
         <div class="text-emerald-500">Public</div>
         <div><Icon name="mdi:dot" size="24" /></div>
@@ -13,7 +13,7 @@
     <div class="flex flex-col @6xl:!flex-row gap-8 mt-8">
       <div class="flex-1 min-w-0 space-y-4">
         <div
-          class="markdown-container bg-zinc-950/50 px-4 py-8 rounded border border-zinc-800"
+          class="markdown-container bg-zinc-950/50 p-4 rounded border border-zinc-800"
         >
           <div
             class="break-words whitespace-break-spaces"
@@ -82,6 +82,10 @@
         <div class="space-y-2">
           <h3 class="font-medium text-lg text-zinc-400">Latest Version</h3>
           <div>{{ data?.["dist-tags"]?.latest }}</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-medium text-lg text-zinc-400">Created</h3>
+          <div>{{ created }}</div>
         </div>
         <div class="space-y-2">
           <h3 class="font-medium text-lg text-zinc-400">Latest Publish</h3>
@@ -168,6 +172,7 @@ const { data: downloads } = await useFetch("/api/npm-registry-downloads", {
   key: "npm-registry-downloads",
 });
 
+const created = useTimeAgo(data.value?.time?.created || new Date());
 const updated = useTimeAgo(data.value?.time?.modified || new Date());
 
 const repositoryUrl = computed(

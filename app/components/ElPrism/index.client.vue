@@ -1,5 +1,5 @@
 <template>
-  <ElTerminal>
+  <ElTerminal :code="props.code">
     <template #file><slot name="file"></slot></template>
     <template #content>
       <div class="whitespace-pre-wrap" v-html="html" />

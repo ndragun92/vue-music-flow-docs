@@ -13,11 +13,22 @@
       <div class="flex-1 text-center min-w-0">
         <slot name="file" />
       </div>
+      <button
+        v-if="isSupported && props.code"
+        type="button"
+        aria-label="Copy"
+        title="Copy"
+        class="flex items-center justify-center hover:text-emerald-500 transition-colors cursor-copy"
+        @click="copy(props.code)"
+      >
+        <template v-if="copied">Copied!</template>
+        <Icon v-else name="material-symbols:copy-all-outline" size="20" />
+      </button>
     </div>
     <div class="flex flex-col px-5 pb-6 pt-4 overflow-x-auto scrollbar-docs">
       <slot name="content">
         <div
-          v-for="(command, commandIndex) in prop.commands"
+          v-for="(command, commandIndex) in props.commands"
           :key="`${command}-${commandIndex}`"
           class="flex items-baseline gap-1 flex-wrap"
         >
@@ -25,7 +36,7 @@
           <p class="flex-1 pl-2 flex items-center">
             {{ command }}
             <Icon
-              v-if="prop.commands.length === commandIndex + 1"
+              v-if="props.commands.length === commandIndex + 1"
               name="ph:line-vertical"
               class="text-white animate-blink"
             />
@@ -38,10 +49,14 @@
 
 <script setup lang="ts">
 type Props = {
+  code?: string;
   commands?: string[];
 };
 
-const prop = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
+  code: "",
   commands: () => [],
 });
+
+const { copy, isSupported, copied } = useClipboard();
 </script>

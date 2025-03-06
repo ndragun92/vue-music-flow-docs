@@ -57,3 +57,19 @@
     -webkit-box-shadow: var(--scroll-bar-shadow);
     background-color: var(--scroll-bar-slider);
 }
+
+.scrollbar-docs::-webkit-scrollbar-track {
+    -webkit-box-shadow: var(--scroll-bar-shadow);
+    background-color: var(--color-zinc-800);
+}
+
+.scrollbar-docs::-webkit-scrollbar {
+    width: var(--scroll-bar-width);
+    height: var(--scroll-bar-height);
+    background-color: var(--color-zinc-100);
+}
+
+.scrollbar-docs::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: var(--scroll-bar-shadow);
+    background-color: var(--color-emerald-500);
+}

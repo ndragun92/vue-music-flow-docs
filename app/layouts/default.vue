@@ -1,5 +1,5 @@
 <template>
-  <Body class="bg-zinc-900 text-white" />
+  <Body class="bg-zinc-900 text-white scrollbar-docs" />
   <div class="flex min-h-svh overflow-x-hidden relative">
     <aside class="border-r border-zinc-800 w-xs p-4 bg-zinc-950/50">
       <div class="flex items-center gap-4 mb-8">

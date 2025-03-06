@@ -1,0 +1,3 @@
+{
+  "nuxtConfigCode": "export default defineNuxtConfig({\n  build: {\n    transpile: [\"vue-music-flow\"],\n  },\n})"
+}

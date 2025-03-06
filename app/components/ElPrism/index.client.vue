@@ -13,10 +13,15 @@ import Prism from "prismjs";
 
 type Props = {
   code: string;
+  ts?: boolean;
 };
 
 const props = defineProps<Props>();
 
 // Returns a highlighted HTML string
-const html = Prism.highlight(props.code || "", Prism.languages.html, "html");
+const html = Prism.highlight(
+  props.code || "",
+  props.ts ? Prism.languages.javascript : Prism.languages.html,
+  props.ts ? "javascript" : "html",
+);
 </script>

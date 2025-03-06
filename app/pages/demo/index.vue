@@ -306,7 +306,6 @@
 </template>
 
 <script setup lang="ts">
-import "vue-music-flow/dist/vue-music-flow.css";
 import { useMusicFlow, type TMusicFlow } from "vue-music-flow";
 
 definePageMeta({

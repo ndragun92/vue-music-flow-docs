@@ -14,7 +14,7 @@
         <slot name="file" />
       </div>
     </div>
-    <div class="flex flex-col px-5 pb-6 pt-4 overflow-x-auto scrollbar">
+    <div class="flex flex-col px-5 pb-6 pt-4 overflow-x-auto scrollbar-docs">
       <slot name="content">
         <div
           v-for="(command, commandIndex) in prop.commands"

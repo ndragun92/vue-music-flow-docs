@@ -397,7 +397,7 @@ const router = useRouter();
 const onPlayAlbum = async (album: Pick<AlbumData, "slug">) => {
   if (routeQueryGenre.value !== album.slug) {
     tracks.value = await $fetch(`/api/${album.slug}`);
-    await router.push({
+    await router.replace({
       name: "demo",
       query: {
         genre: album.slug,

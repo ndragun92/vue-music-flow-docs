@@ -134,7 +134,9 @@
           </div>
         </div>
         <div class="space-y-2">
-          <h3 class="font-medium text-lg text-zinc-400">All Versions</h3>
+          <h3 class="font-medium text-lg text-zinc-400">
+            All Versions ({{ Object.keys(versions).length }})
+          </h3>
           <div>
             <ul class="flex items-center gap-2 flex-wrap">
               <li

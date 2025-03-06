@@ -1,7 +1,12 @@
 <template>
   <Body class="bg-zinc-900 text-white scrollbar-docs" />
   <div class="flex min-h-svh overflow-x-hidden relative">
-    <aside class="border-r border-zinc-800 w-xs p-4 bg-zinc-950/50">
+    <aside
+      class="sidebar border-r border-zinc-800 w-xs p-4 bg-zinc-950/98 lg:bg-zinc-950/50 transition-transform"
+      :class="{
+        'sidebar--open': showSidebar,
+      }"
+    >
       <div class="flex items-center gap-4 mb-8">
         <NuxtImg
           class="size-8"
@@ -11,6 +16,15 @@
         <h1 class="font-semibold text-xl">
           Vue Music Flow <sup class="text-emerald-500">Docs</sup>
         </h1>
+        <button
+          type="button"
+          aria-label="Toggle sidebar"
+          :aria-expanded="showSidebar"
+          class="sidebar-toggle items-center justify-center hover:text-emerald-500 transition-colors cursor-pointer"
+          @click="showSidebar = false"
+        >
+          <Icon name="solar:close-square-linear" size="34" />
+        </button>
       </div>
       <h2 class="text-sm font-medium mb-4">Guide</h2>
       <ul>
@@ -87,6 +101,18 @@
             >Options</nuxt-link
           >
         </li>
+        <li>
+          <nuxt-link
+            :to="{
+              name: 'demo',
+            }"
+            class="block border-l pl-4 py-1 border-zinc-800 text-sm text-zinc-400 hover:text-white transition-colors"
+            :class="{
+              '!border-emerald-500 !text-white': routeName === 'demo',
+            }"
+            >Demo page</nuxt-link
+          >
+        </li>
       </ul>
     </aside>
     <main class="flex-1 min-w-0">
@@ -137,8 +163,19 @@
         </svg>
       </div>
       <nav
-        class="border-b border-zinc-800 h-14 bg-zinc-950/50 flex justify-end items-center px-8"
+        class="border-b border-zinc-800 h-14 bg-zinc-950/50 flex justify-between items-center px-8"
       >
+        <div>
+          <button
+            type="button"
+            aria-label="Toggle sidebar"
+            :aria-expanded="showSidebar"
+            class="navbar-toggle items-center justify-center hover:text-emerald-500 transition-colors cursor-pointer"
+            @click="showSidebar = true"
+          >
+            <Icon name="solar:hamburger-menu-linear" size="34" />
+          </button>
+        </div>
         <div>
           <a
             class="hover:text-emerald-500 transition-colors hover:underline"
@@ -161,4 +198,41 @@
 const route = useRoute();
 
 const routeName = computed(() => route.name as string);
+
+const showSidebar = ref(false);
+
+watch(routeName, () => {
+  showSidebar.value = false;
+});
 </script>
+
+<style scoped>
+.sidebar {
+  transform: translateX(0);
+}
+.sidebar--open {
+  transform: translateX(0);
+}
+.sidebar-toggle {
+  display: none;
+}
+.navbar-toggle {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .sidebar-toggle {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: flex;
+  }
+  .sidebar {
+    position: fixed;
+    inset: 0;
+    transform: translateX(-100%);
+  }
+  .sidebar--open {
+    transform: translateX(0);
+  }
+}
+</style>

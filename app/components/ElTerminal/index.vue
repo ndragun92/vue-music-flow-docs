@@ -13,17 +13,18 @@
       <div class="flex-1 text-center min-w-0">
         <slot name="file" />
       </div>
-      <button
-        v-if="isSupported && props.code"
-        type="button"
-        aria-label="Copy"
-        title="Copy"
-        class="flex items-center justify-center hover:text-emerald-500 transition-colors cursor-copy"
-        @click="copy(props.code)"
-      >
-        <template v-if="copied">Copied!</template>
-        <Icon v-else name="material-symbols:copy-all-outline" size="20" />
-      </button>
+      <div v-if="isSupported && props.code" class="w-20 flex justify-end">
+        <button
+          type="button"
+          aria-label="Copy"
+          title="Copy"
+          class="flex items-center justify-center hover:text-emerald-500 transition-colors cursor-copy"
+          @click="copy(props.code)"
+        >
+          <template v-if="copied">Copied!</template>
+          <Icon v-else name="material-symbols:copy-all-outline" size="20" />
+        </button>
+      </div>
     </div>
     <div class="flex flex-col px-5 pb-6 pt-4 overflow-x-auto scrollbar-docs">
       <slot name="content">

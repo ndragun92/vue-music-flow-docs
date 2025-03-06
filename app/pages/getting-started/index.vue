@@ -30,7 +30,16 @@
         >Nuxt 3+</a
       >
     </div>
-    <div class="flex justify-end">
+    <div class="flex justify-between items-center">
+      <nuxt-link
+        :to="{
+          name: 'index',
+        }"
+        class="text-sm flex items-center gap-2 hover:underline"
+      >
+        <Icon name="mdi:arrow-left" size="20" />
+        Navigate to overview
+      </nuxt-link>
       <nuxt-link
         :to="{
           name: 'installation',

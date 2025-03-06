@@ -22,9 +22,6 @@
 }
 
 :root, :host {
-    /*--breakpoint-phone: 40rem;*/
-    /*--breakpoint-tablet: 80rem;*/
-
     --color-primary-dark: oklch(0.13 0.028 261.692);
     --color-primary: oklch(0.21 0.034 264.665);
     --color-secondary: oklch(0.278 0.033 256.848);

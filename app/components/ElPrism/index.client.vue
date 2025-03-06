@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts" setup>
-import "prismjs/themes/prism-okaidia.min.css";
 import Prism from "prismjs";
+import "prismjs/themes/prism-tomorrow.min.css";
 
 type Props = {
   code: string;

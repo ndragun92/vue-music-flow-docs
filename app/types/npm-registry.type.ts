@@ -1,3 +1,10 @@
+export type TNpmRegistryDownloads = {
+  downloads: number;
+  start: string;
+  end: string;
+  package: string;
+};
+
 export type TNpmRegistry = {
   _id: string;
   _rev: string;

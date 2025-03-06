@@ -309,6 +309,10 @@
 import "vue-music-flow/dist/vue-music-flow.css";
 import { useMusicFlow, type TMusicFlow } from "vue-music-flow";
 
+definePageMeta({
+  layout: "demo",
+});
+
 type Data = Omit<TMusicFlow, "original"> & {
   original: {
     genre: string;

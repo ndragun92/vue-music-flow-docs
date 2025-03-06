@@ -12,8 +12,21 @@
           Vue Music Flow <sup class="text-emerald-500">Docs</sup>
         </h1>
       </div>
-      <h2 class="text-sm font-medium mb-4">Getting Started</h2>
+      <h2 class="text-sm font-medium mb-4">Guide</h2>
       <ul>
+        <li>
+          <nuxt-link
+            :to="{
+              name: 'getting-started',
+            }"
+            class="block border-l pl-4 py-1 border-zinc-800 text-sm text-zinc-400 hover:text-white transition-colors"
+            :class="{
+              '!border-emerald-500 !text-white':
+                routeName === 'getting-started',
+            }"
+            >Getting Started</nuxt-link
+          >
+        </li>
         <li>
           <nuxt-link
             :to="{

@@ -395,13 +395,15 @@ const onPlayTrack = (tracks: Data[], track: Data) => {
 
 const router = useRouter();
 const onPlayAlbum = async (album: Pick<AlbumData, "slug">) => {
-  tracks.value = await $fetch(`/api/${album.slug}`);
-  await router.push({
-    name: "demo",
-    query: {
-      genre: album.slug,
-    },
-  });
+  if (routeQueryGenre.value !== album.slug) {
+    tracks.value = await $fetch(`/api/${album.slug}`);
+    await router.push({
+      name: "demo",
+      query: {
+        genre: album.slug,
+      },
+    });
+  }
   await nextTick();
   if (tracks.value?.length) {
     onPlayTrack(tracks.value, tracks.value[0]!);

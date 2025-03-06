@@ -72,7 +72,7 @@
       </p>
       <div class="flex flex-1 justify-end text-sm/6 text-primary-typography">
         <nuxt-link
-          :to="{ name: 'docs' }"
+          :to="{ name: 'index' }"
           class="whitespace-nowrap font-semibold hover:underline"
           >Click here to visit docs&nbsp;<span aria-hidden="true"
             >&rarr;</span

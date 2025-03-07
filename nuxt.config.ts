@@ -42,13 +42,14 @@ export default defineNuxtConfig({
     // compressPublicAssets: true,
     routeRules: {
       // "/_nuxt/**": { headers: { "cache-control": "max-age=31536000" } }, // Set generated files cache to 1 year
+      // revalidated every 60 seconds, in the background
+      "/": { isr: 60 },
       "/getting-started": { prerender: true },
       "/installation": { prerender: true },
       "/usage": { prerender: true },
       "/customization": { prerender: true },
       "/options": { prerender: true },
-      // revalidated every 600 seconds, in the background
-      "/demo": { isr: 600 },
+      "/demo": { ssr: false },
     },
   },
 

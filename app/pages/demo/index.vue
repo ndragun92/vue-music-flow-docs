@@ -88,6 +88,8 @@
         src="/images/cover.jpg"
         alt="Hero Image"
         format="webp"
+        sizes="100vw sm:640px md:768px lg:1024px"
+        quality="80"
       />
       <div
         class="absolute inset-0 bg-linear-to-t from-primary-dark to-primary-dark/25"

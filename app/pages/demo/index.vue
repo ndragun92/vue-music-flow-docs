@@ -83,20 +83,19 @@
     <section
       class="relative overflow-auto border-b h-[400px] lg:!h-[550px] border-primary-border"
     >
-      <!--      <NuxtImg-->
-      <!--        class="object-cover object-bottom size-full"-->
-      <!--        src="/images/cover.jpg"-->
-      <!--        alt="Hero Image"-->
-      <!--        format="webp"-->
-      <!--        sizes="100vw sm:640px md:768px lg:1024px"-->
-      <!--        quality="80"-->
-      <!--        fetchpriority="high"-->
-      <!--        densities="1x"-->
-      <!--        width="1920"-->
-      <!--        height="550"-->
-      <!--        preload-->
-      <!--        loading="lazy"-->
-      <!--      />-->
+      <NuxtImg
+        class="object-cover object-bottom size-full"
+        src="/images/cover.jpg"
+        alt="Hero Image"
+        format="webp"
+        sizes="100vw sm:640px md:768px lg:1024px"
+        quality="80"
+        fetchpriority="high"
+        densities="1x"
+        width="1920"
+        height="550"
+        preload
+      />
       <div
         class="absolute inset-0 bg-linear-to-t from-primary-dark to-primary-dark/25"
       />
@@ -150,6 +149,11 @@
                 class="rounded-lg border object-cover object-center size-full p-0.5 bg-primary border-primary-border"
                 :src="album.artwork"
                 :alt="album.album"
+                sizes="256px"
+                quality="80"
+                width="256"
+                height="256"
+                loading="lazy"
                 format="webp"
               />
               <span
@@ -225,6 +229,11 @@
                     class="rounded-lg border object-cover object-center size-full border-primary-border bg-primary p-0.5"
                     :src="track.artwork"
                     :alt="track.title"
+                    sizes="64px"
+                    quality="80"
+                    width="64"
+                    height="64"
+                    loading="lazy"
                     format="webp"
                   />
                 </span>

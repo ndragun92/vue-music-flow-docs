@@ -1,7 +1,7 @@
 <template>
   <NuxtLoadingIndicator />
   <NuxtLayout>
-    <Html lang="en" version="4" :data-route-path="$route?.path">
+    <Html lang="en" version="5" :data-route-path="$route?.path">
       <Head>
         <Title>{{ title }}</Title>
         <Meta name="color-scheme" content="dark" />

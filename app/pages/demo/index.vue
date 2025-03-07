@@ -1,7 +1,4 @@
 <template>
-  <Head>
-    <Link rel="preload" href="/images/cover.jpg" as="image" />
-  </Head>
   <Body class="scrollbar" />
   <main class="min-h-svh bg-primary-dark text-primary-typography">
     <div
@@ -98,6 +95,7 @@
         width="1920"
         height="550"
         preload
+        loading="lazy"
       />
       <div
         class="absolute inset-0 bg-linear-to-t from-primary-dark to-primary-dark/25"

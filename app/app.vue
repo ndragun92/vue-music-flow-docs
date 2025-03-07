@@ -41,7 +41,6 @@
     </Html>
     <NuxtPage />
   </NuxtLayout>
-  <ElClarity />
 </template>
 
 <script lang="ts" setup>

@@ -47,7 +47,8 @@ export default defineNuxtConfig({
       "/usage": { prerender: true },
       "/customization": { prerender: true },
       "/options": { prerender: true },
-      "/demo": { ssr: false },
+      // revalidated every 600 seconds, in the background
+      "/demo": { isr: 600 },
     },
   },
 

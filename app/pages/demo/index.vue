@@ -83,20 +83,20 @@
     <section
       class="relative overflow-auto border-b h-[400px] lg:!h-[550px] border-primary-border"
     >
-      <NuxtImg
-        class="object-cover object-bottom size-full"
-        src="/images/cover.jpg"
-        alt="Hero Image"
-        format="webp"
-        sizes="100vw sm:640px md:768px lg:1024px"
-        quality="80"
-        fetchpriority="high"
-        densities="1x"
-        width="1920"
-        height="550"
-        preload
-        loading="lazy"
-      />
+      <!--      <NuxtImg-->
+      <!--        class="object-cover object-bottom size-full"-->
+      <!--        src="/images/cover.jpg"-->
+      <!--        alt="Hero Image"-->
+      <!--        format="webp"-->
+      <!--        sizes="100vw sm:640px md:768px lg:1024px"-->
+      <!--        quality="80"-->
+      <!--        fetchpriority="high"-->
+      <!--        densities="1x"-->
+      <!--        width="1920"-->
+      <!--        height="550"-->
+      <!--        preload-->
+      <!--        loading="lazy"-->
+      <!--      />-->
       <div
         class="absolute inset-0 bg-linear-to-t from-primary-dark to-primary-dark/25"
       />

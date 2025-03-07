@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <div class="space-y-4 pb-16">
+    <h2 class="text-4xl font-semibold">Live Builder</h2>
+    <p class="text-lg text-zinc-300">
+      Customize waveform options and player styles effortlessly using the
+      interactive UI.
+    </p>
+    <h3 class="text-lg font-medium">Waveform Options</h3>
     <div class="grid grid-cols-3 gap-8 text-xs">
       <div class="space-y-2">
         <div class="space-y-2">
@@ -320,17 +326,324 @@
             </div>
           </div>
         </div>
+
+        <div class="mt-4">
+          <button
+            class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
+            type="button"
+            @click="onExportWaveformOptions"
+          >
+            Export Waveform Options
+          </button>
+        </div>
       </div>
+    </div>
+    <h3 class="text-lg font-medium">Player CSS (Styles)</h3>
+    <div class="grid grid-cols-3 gap-8 text-xs">
+      <div class="space-y-2">
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorPrimaryDark"
+              >Primary color dark</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.colorPrimaryDark = cssDefault.colorPrimaryDark"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorPrimaryDark"
+            class="w-full"
+            type="color"
+            v-model="css.colorPrimaryDark"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorPrimary"
+              >Primary color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.colorPrimary = cssDefault.colorPrimary"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorPrimary"
+            class="w-full"
+            type="color"
+            v-model="css.colorPrimary"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorSecondary"
+              >Secondary color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.colorSecondary = cssDefault.colorSecondary"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorSecondary"
+            class="w-full"
+            type="color"
+            v-model="css.colorSecondary"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorPrimaryBorder"
+              >Primary border color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.colorPrimaryBorder = cssDefault.colorPrimaryBorder"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorPrimaryBorder"
+            class="w-full"
+            type="color"
+            v-model="css.colorPrimaryBorder"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorPrimaryHover"
+              >Primary hover color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.colorPrimaryHover = cssDefault.colorPrimaryHover"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorPrimaryHover"
+            class="w-full"
+            type="color"
+            v-model="css.colorPrimaryHover"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorPrimaryActive"
+              >Primary active color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.colorPrimaryActive = cssDefault.colorPrimaryActive"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorPrimaryActive"
+            class="w-full"
+            type="color"
+            v-model="css.colorPrimaryActive"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorPrimaryTypography"
+              >Primary typography color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="
+                css.colorPrimaryTypography = cssDefault.colorPrimaryTypography
+              "
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorPrimaryTypography"
+            class="w-full"
+            type="color"
+            v-model="css.colorPrimaryTypography"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="colorSecondaryTypography"
+              >Secondary typography color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="
+                css.colorSecondaryTypography =
+                  cssDefault.colorSecondaryTypography
+              "
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="colorSecondaryTypography"
+            class="w-full"
+            type="color"
+            v-model="css.colorSecondaryTypography"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="scrollBarBackgroundLight"
+              >Scroll bar light background color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="
+                css.scrollBarBackgroundLight =
+                  cssDefault.scrollBarBackgroundLight
+              "
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="scrollBarBackgroundLight"
+            class="w-full"
+            type="color"
+            v-model="css.scrollBarBackgroundLight"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="scrollBarBackground"
+              >Scroll bar background color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.scrollBarBackground = cssDefault.scrollBarBackground"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="scrollBarBackground"
+            class="w-full"
+            type="color"
+            v-model="css.scrollBarBackground"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex items-center justify-between">
+            <label class="block font-medium" for="scrollBarSlider"
+              >Scroll bar slider color</label
+            >
+            <button
+              type="button"
+              class="flex items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-red-500"
+              @click="css.scrollBarSlider = cssDefault.scrollBarSlider"
+            >
+              Reset
+            </button>
+          </div>
+          <input
+            id="scrollBarSlider"
+            class="w-full"
+            type="color"
+            v-model="css.scrollBarSlider"
+          />
+        </div>
+      </div>
+      <div class="space-y-4">
+        <button
+          class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
+          type="button"
+          :disabled="reRender"
+          @click="onResetToDefault"
+        >
+          Reset CSS
+        </button>
+        <button
+          class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
+          type="button"
+          :disabled="reRender"
+          @click="onRefreshPlayer"
+        >
+          {{ reRender ? "Refresing" : "Refresh" }} player
+        </button>
+        <button
+          class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
+          type="button"
+          @click="onExportCSSConfig"
+        >
+          Export Player CSS Configuration
+        </button>
+      </div>
+      <div />
     </div>
   </div>
   <client-only>
-    <MusicFlow v-if="!reRender" :options="playerOptions" />
+    <MusicFlow :style="returnCSS" v-if="!reRender" :options="playerOptions" />
   </client-only>
 </template>
 
 <script lang="ts" setup>
 import { MusicFlow, useMusicFlow } from "vue-music-flow";
 import { promiseTimeout } from "@vueuse/core";
+
+const stateDefault = {
+  height: 50,
+  heightDefault: false,
+  waveColor: "#ffffff",
+  waveColorDefault: false,
+  progressColor: "#55da36",
+  progressColorDefault: false,
+  cursorColor: "#55da36",
+  cursorColorDefault: false,
+  cursorWidth: 1,
+  cursorWidthDefault: false,
+  barWidth: 4,
+  barWidthDefault: false,
+  barGap: 4,
+  barGapDefault: false,
+  barRadius: 4,
+  barRadiusDefault: false,
+  barHeight: 0.8,
+  barHeightDefault: false,
+  minPxPerSec: 10,
+  minPxPerSecDefault: true,
+  autoScroll: false,
+  autoCenter: false,
+  hideScrollbar: false,
+  interact: true,
+  autoplay: false,
+};
 
 const state = ref<{
   height?: number;
@@ -358,33 +671,23 @@ const state = ref<{
   hideScrollbar?: boolean;
   interact?: boolean;
   autoplay?: boolean;
-}>({
-  height: 50,
-  heightDefault: false,
-  waveColor: "#ffffff",
-  waveColorDefault: false,
-  progressColor: "#55da36",
-  progressColorDefault: false,
-  cursorColor: "#55da36",
-  cursorColorDefault: false,
-  cursorWidth: 1,
-  cursorWidthDefault: false,
-  barWidth: 4,
-  barWidthDefault: false,
-  barGap: 4,
-  barGapDefault: false,
-  barRadius: 4,
-  barRadiusDefault: false,
-  barHeight: 0.8,
-  barHeightDefault: false,
-  minPxPerSec: 10,
-  minPxPerSecDefault: true,
-  autoScroll: false,
-  autoCenter: false,
-  hideScrollbar: false,
-  interact: true,
-  autoplay: false,
-});
+}>(JSON.parse(JSON.stringify(stateDefault)));
+
+const cssDefault = {
+  colorPrimaryDark: "#030712",
+  colorPrimary: "#101828",
+  colorSecondary: "#1e2939",
+  colorPrimaryBorder: "#1e2939",
+  colorPrimaryHover: "#8e51ff",
+  colorPrimaryActive: "#a684ff",
+  colorPrimaryTypography: "#fafafa",
+  colorSecondaryTypography: "#a1a1a1",
+  scrollBarBackgroundLight: "#f8fafc",
+  scrollBarBackground: "#1d293d",
+  scrollBarSlider: "#8e51ff",
+};
+
+const css = ref(JSON.parse(JSON.stringify(cssDefault)));
 
 const playerOptions = computed(() => {
   const data = JSON.parse(JSON.stringify(state.value));
@@ -572,13 +875,8 @@ const reRender = ref(false);
 
 watchDebounced(
   playerOptions,
-  async (_state) => {
-    onClose();
-    reRender.value = true;
-    await promiseTimeout(1000);
-    reRender.value = false;
-    await nextTick();
-    onPlayAsPlaylist(tracks, tracks[0]);
+  async () => {
+    await onRefreshPlayer();
   },
   {
     debounce: 1000,
@@ -586,4 +884,63 @@ watchDebounced(
     immediate: true,
   },
 );
+
+const returnCSS = computed(() => {
+  return {
+    "--color-primary-dark": css.value.colorPrimaryDark,
+    "--color-primary": css.value.colorPrimary,
+    "--color-secondary": css.value.colorSecondary,
+    "--color-primary-border": css.value.colorPrimaryBorder,
+    "--color-primary-hover": css.value.colorPrimaryHover,
+    "--color-primary-active": css.value.colorPrimaryActive,
+    "--color-primary-typography": css.value.colorPrimaryTypography,
+    "--color-secondary-typography": css.value.colorSecondaryTypography,
+    "--scroll-bar-background-light": css.value.scrollBarBackgroundLight,
+    "--scroll-bar-background": css.value.scrollBarBackground,
+    "--scroll-bar-slider": css.value.scrollBarSlider,
+  };
+});
+
+const onResetToDefault = async () => {
+  css.value = JSON.parse(JSON.stringify(cssDefault));
+};
+
+const onRefreshPlayer = async () => {
+  onClose();
+  reRender.value = true;
+  await promiseTimeout(1000);
+  reRender.value = false;
+  await nextTick();
+  onPlayAsPlaylist(tracks, tracks[0]);
+};
+
+const onExportWaveformOptions = () => {
+  exportAsJsonFile(
+    JSON.parse(JSON.stringify(playerOptions.value)),
+    "vue-music-flow_waveform-options",
+  );
+};
+
+const onExportCSSConfig = () => {
+  exportAsJsonFile(
+    JSON.parse(JSON.stringify(returnCSS.value)),
+    "vue-music-flow_player-css",
+  );
+};
+
+const exportAsJsonFile = (data: object, fileName: string) => {
+  const jsonData = JSON.stringify(data, null, 2); // Convert the object to a formatted JSON string
+  const blob = new Blob([jsonData], { type: "application/json" }); // Create a Blob from the JSON string
+  const url = URL.createObjectURL(blob); // Create a URL for the Blob
+
+  const link = document.createElement("a"); // Create a temporary link element
+  link.href = url;
+  link.download = `${fileName}.json`; // Set the file name
+
+  document.body.appendChild(link); // Append the link to the document
+  link.click(); // Simulate a click to download the file
+  document.body.removeChild(link); // Remove the link after download
+
+  URL.revokeObjectURL(url); // Clean up the object URL
+};
 </script>

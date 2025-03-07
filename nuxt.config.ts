@@ -52,6 +52,7 @@ export default defineNuxtConfig({
       "/customization": { prerender: true },
       "/options": { prerender: true },
       "/demo": { ssr: false },
+      "/builder": { ssr: false },
     },
   },
 

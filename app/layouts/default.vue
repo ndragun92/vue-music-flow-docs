@@ -113,6 +113,18 @@
             >Demo page</nuxt-link
           >
         </li>
+        <li>
+          <nuxt-link
+            :to="{
+              name: 'builder',
+            }"
+            class="block border-l pl-4 py-1 border-zinc-800 text-sm text-zinc-400 hover:text-white transition-colors"
+            :class="{
+              '!border-emerald-500 !text-white': routeName === 'builder',
+            }"
+            >Player Builder</nuxt-link
+          >
+        </li>
       </ul>
     </aside>
     <main class="flex-1 min-w-0">

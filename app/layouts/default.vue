@@ -176,7 +176,15 @@
             <Icon name="solar:hamburger-menu-linear" size="34" />
           </button>
         </div>
-        <div>
+        <div class="space-x-4">
+          <a
+            class="hover:text-emerald-500 transition-colors hover:underline"
+            href="https://www.npmjs.com/package/vue-music-flow"
+            target="_blank"
+            aria-label="NPM Link"
+          >
+            <Icon name="mdi:npm" size="24" />
+          </a>
           <a
             class="hover:text-emerald-500 transition-colors hover:underline"
             href="https://github.com/ndragun92/vue-music-flow"
@@ -187,7 +195,7 @@
           </a>
         </div>
       </nav>
-      <article class="p-6">
+      <article class="p-6 pb-12">
         <slot />
       </article>
     </main>

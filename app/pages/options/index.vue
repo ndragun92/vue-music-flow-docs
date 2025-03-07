@@ -11,7 +11,7 @@
       </div>
       <div class="mt-4 flow-root">
         <div
-          class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 scrollbar-docs"
+          class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8 scrollbar-docs min-w-0"
         >
           <div
             class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8"
@@ -45,7 +45,7 @@
                   </th>
                   <th
                     scope="col"
-                    class="px-4 text-left text-sm font-semibold py-3.5"
+                    class="px-4 text-left text-sm font-semibold py-3.5 min-w-xl"
                   >
                     Default
                   </th>
@@ -171,7 +171,7 @@
                   </th>
                   <th
                     scope="col"
-                    class="px-4 text-center text-sm font-semibold py-3.5"
+                    class="px-4 text-left text-sm font-semibold py-3.5 min-w-xl"
                   >
                     Available data
                   </th>
@@ -188,7 +188,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     image
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #image={ track }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
@@ -199,7 +199,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     metadata
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #metadata={ track }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
@@ -210,7 +210,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     controls
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #controls={ togglePlayback, isPlaying, onPlayPreviousTrack,
                     onPlayNextTrack, onToggleRepeat, playlist, playlistOptions }
                   </td>
@@ -222,7 +222,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     currentDuration
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #currentDuration={ currentDuration }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
@@ -233,7 +233,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     waveform
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #waveform={ initializing }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
@@ -244,7 +244,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     endDuration
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #endDuration={ endDuration }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
@@ -255,7 +255,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     volume
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">-</td>
+                  <td class="whitespace-nowrap p-4 text-sm text-left">-</td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
                     Lets you customize volume slot
                   </td>
@@ -264,7 +264,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     actions
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #actions={ track }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">
@@ -276,7 +276,7 @@
                   <td class="whitespace-nowrap py-4 px-4 text-sm font-medium">
                     close
                   </td>
-                  <td class="whitespace-nowrap p-4 text-sm text-center">
+                  <td class="whitespace-nowrap p-4 text-sm text-left">
                     #close={ onClosePlayer }
                   </td>
                   <td class="whitespace-nowrap py-4 px-4 text-sm">

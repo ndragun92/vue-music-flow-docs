@@ -1,7 +1,12 @@
 <template>
   <NuxtLoadingIndicator />
   <NuxtLayout>
-    <Html lang="en" version="5" :data-route-path="$route?.path">
+    <Html
+      lang="en"
+      version="6"
+      :data-route-path="$route?.path"
+      :data-app-origin="nuxtApp?.$app_origin"
+    >
       <Head>
         <Title>{{ title }}</Title>
         <Meta name="color-scheme" content="dark" />
@@ -29,20 +34,9 @@
           property="og:url"
           :content="`${nuxtApp?.$app_origin}${$route?.path}`"
         />
-        <Link
-          rel="icon"
-          type="image/x-icon"
-          :href="`${nuxtApp?.$app_origin}/favicon.ico`"
-        />
-        <Link
-          rel="apple-touch-icon"
-          type="image/png"
-          :href="`${nuxtApp?.$app_origin}/favicon.png`"
-        />
-        <Link
-          rel="apple-touch-startup-image"
-          :href="`${nuxtApp?.$app_origin}/favicon.ico`"
-        />
+        <Link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <Link rel="apple-touch-icon" type="image/png" href="/favicon.png" />
+        <Link rel="apple-touch-startup-image" href="/favicon.ico" />
       </Head>
     </Html>
     <NuxtPage />

@@ -194,95 +194,102 @@
           <li
             v-for="(track, trackIndex) in tracks"
             :key="track.id"
-            class="flex flex-col items-center gap-4 border p-4 px-5 border-primary-border bg-primary/50 lg:flex-row lg:gap-8 lg:border-none lg:bg-transparent lg:p-0"
-            :class="{
-              '!bg-secondary/50 lg:!bg-secondary/25':
-                returnTrack?.id === track.id,
-            }"
+            class="w-full"
           >
-            <div class="lg:w-8">#{{ trackIndex + 1 }}</div>
-            <div class="size-16">
-              <NuxtImg
-                class="rounded-lg border object-cover object-center size-full border-primary-border bg-primary p-0.5"
-                :src="track.artwork"
-                :alt="track.title"
-                format="webp"
-              />
-            </div>
-            <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-8"
+            <button
+              class="group flex flex-col w-full cursor-pointer items-center gap-4 border p-4 px-5 transition-colors hover:bg-secondary/25 border-primary-border bg-primary/50 lg:flex-row lg:gap-8 lg:border-none lg:bg-transparent lg:p-0"
+              :class="{
+                '!bg-secondary/50 lg:!bg-secondary/25':
+                  returnTrack?.id === track.id,
+              }"
+              :aria-label="isTrackPlaying(track.id) ? 'Pause' : 'Play'"
+              :aria-pressed="isTrackPlaying(track.id) ? 'true' : 'false'"
+              tabindex="0"
+              type="button"
+              @click="onPlayTrack(tracks, track)"
             >
-              <button
-                class="cursor-pointer hover:text-primary-hover flex items-center justify-center"
-                type="button"
-                :aria-label="isTrackPlaying(track.id) ? 'Pause' : 'Play'"
-                :aria-pressed="isTrackPlaying(track.id) ? 'true' : 'false'"
-                @click="onPlayTrack(tracks, track)"
-              >
-                <Icon
-                  v-if="isTrackPlaying(track.id)"
-                  name="mdi:pause"
-                  size="24"
+              <span class="block lg:w-8">#{{ trackIndex + 1 }}</span>
+              <span class="block size-16">
+                <NuxtImg
+                  class="rounded-lg border object-cover object-center size-full border-primary-border bg-primary p-0.5"
+                  :src="track.artwork"
+                  :alt="track.title"
+                  format="webp"
                 />
-                <Icon v-else name="mdi:play" size="24" />
-              </button>
-            </div>
-            <div class="min-w-0 flex-1 text-center lg:!text-left">
-              <h3
-                class="truncate text-lg font-semibold"
-                :title="track.title"
-                :aria-label="track.title"
+              </span>
+              <span
+                class="flex items-center gap-2 text-secondary-typography lg:w-8"
               >
-                {{ track.title }}
-              </h3>
-              <h4
-                class="truncate text-secondary-typography"
-                :title="track.album"
-                :aria-label="track.album"
+                <span
+                  class="group-hover:text-primary-hover group-focus-within:text-primary-hover flex items-center justify-center"
+                >
+                  <Icon
+                    v-if="isTrackPlaying(track.id)"
+                    name="mdi:pause"
+                    size="24"
+                  />
+                  <Icon v-else name="mdi:play" size="24" />
+                </span>
+              </span>
+              <span class="block min-w-0 flex-1 text-center lg:!text-left">
+                <span
+                  class="block truncate text-lg font-semibold"
+                  :title="track.title"
+                  :aria-label="track.title"
+                >
+                  {{ track.title }}
+                </span>
+                <span
+                  class="block truncate text-secondary-typography"
+                  :title="track.album"
+                  :aria-label="track.album"
+                >
+                  {{ track.album }}
+                </span>
+              </span>
+              <span
+                class="flex items-center gap-2 text-secondary-typography lg:w-80 text-sm"
               >
-                {{ track.album }}
-              </h4>
-            </div>
-            <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-80 text-sm"
-            >
-              <Icon name="mdi:user" size="20" />
-              <span>{{ track.artist }}</span>
-            </div>
-            <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-40 text-sm"
-            >
-              <Icon name="mdi:headphones" size="20" />
-              <span><ElNumberFlow v-model="track.original.plays" /></span>
-            </div>
-            <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-40 text-sm"
-            >
-              <Icon name="mdi:folder-music" size="20" />
-              <span>{{ track.original.genre || "No genre" }}</span>
-            </div>
-            <div
-              class="flex items-center gap-2 text-secondary-typography lg:w-20 text-sm"
-            >
-              <Icon name="mdi:clock" size="20" />
-              <span>{{ track.original.duration || 0 }}</span>
-            </div>
-            <div class="flex items-center gap-2 text-secondary-typography">
-              <button
-                class="cursor-pointer hover:text-primary-hover flex items-center justify-center"
-                type="button"
-                :aria-label="`${track.original.isFavorite ? 'Add to favorites' : 'Remove from favorites'}`"
-                @click="track.original.isFavorite = !track.original.isFavorite"
+                <Icon name="mdi:user" size="20" />
+                <span>{{ track.artist }}</span>
+              </span>
+              <span
+                class="flex items-center gap-2 text-secondary-typography lg:w-40 text-sm"
               >
-                <Icon
-                  name="mdi:heart"
-                  size="20"
-                  :class="{
-                    'text-red-500': track.original.isFavorite,
-                  }"
-                />
-              </button>
-            </div>
+                <Icon name="mdi:headphones" size="20" />
+                <span><ElNumberFlow v-model="track.original.plays" /></span>
+              </span>
+              <span
+                class="flex items-center gap-2 text-secondary-typography lg:w-40 text-sm text-center"
+              >
+                <Icon name="mdi:folder-music" size="20" />
+                <span>{{ track.original.genre || "No genre" }}</span>
+              </span>
+              <span
+                class="flex items-center gap-2 text-secondary-typography lg:w-20 text-sm"
+              >
+                <Icon name="mdi:clock" size="20" />
+                <span>{{ track.original.duration || 0 }}</span>
+              </span>
+              <span class="flex items-center gap-2 text-secondary-typography">
+                <button
+                  class="cursor-pointer hover:text-primary-hover flex items-center justify-center"
+                  type="button"
+                  :aria-label="`${track.original.isFavorite ? 'Add to favorites' : 'Remove from favorites'}`"
+                  @click="
+                    track.original.isFavorite = !track.original.isFavorite
+                  "
+                >
+                  <Icon
+                    name="mdi:heart"
+                    size="20"
+                    :class="{
+                      'text-red-500': track.original.isFavorite,
+                    }"
+                  />
+                </button>
+              </span>
+            </button>
           </li>
         </ul>
       </div>

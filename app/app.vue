@@ -3,7 +3,7 @@
   <NuxtLayout>
     <Html
       lang="en"
-      version="6"
+      version="7"
       :data-route-path="$route?.path"
       :data-app-origin="nuxtApp?.$app_origin"
     >

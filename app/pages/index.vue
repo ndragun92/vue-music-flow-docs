@@ -222,6 +222,12 @@ const returnContent = () => $mdRenderer.render(data.value?.readme);
   color: var(--color-emerald-600);
 }
 
+.markdown-container blockquote {
+  background-color: var(--color-zinc-900);
+  border-radius: var(--radius-md);
+  padding: 0.05rem 1rem;
+}
+
 .markdown-container code {
   background-color: var(--color-zinc-700);
   border-radius: var(--radius-md);

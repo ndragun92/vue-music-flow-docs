@@ -27,7 +27,7 @@
     </template>
   </MusicFlow>
 </template>
+
 <script setup lang="ts">
-import "vue-music-flow/dist/vue-music-flow.css";
 import { MusicFlow } from "vue-music-flow";
 </script>

@@ -39,6 +39,7 @@
     "@number-flow/vue": "^0.4.3",
     "@nuxt/fonts": "^0.10.3",
     "@tailwindcss/vite": "^4.0.9",
+    "@vercel/analytics": "^1.5.0",
     "@vueuse/nuxt": "^12.5.0",
     "highlight.js": "^11.11.1",
     "markdown-it": "^14.1.0",

@@ -310,9 +310,11 @@
       <ElMusicFlow />
     </client-only>
   </main>
+  <Analytics />
 </template>
 
 <script setup lang="ts">
+import { Analytics } from "@vercel/analytics/nuxt";
 import { useMusicFlow, type TMusicFlow } from "vue-music-flow";
 
 definePageMeta({

@@ -6,7 +6,7 @@
       interactive UI.
     </p>
     <h3 class="text-lg font-medium">Waveform Options</h3>
-    <div class="grid grid-cols-3 gap-8 text-xs">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-xs">
       <div class="space-y-2">
         <div class="space-y-2">
           <div class="flex items-center justify-between">
@@ -339,7 +339,7 @@
       </div>
     </div>
     <h3 class="text-lg font-medium">Player CSS (Styles)</h3>
-    <div class="grid grid-cols-3 gap-8 text-xs">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-xs">
       <div class="space-y-2">
         <div class="space-y-2">
           <div class="flex items-center justify-between">

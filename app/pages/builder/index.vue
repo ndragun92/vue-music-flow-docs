@@ -13,21 +13,12 @@
             <label class="block font-medium" for="height"
               >The height of the waveform ({{ state.height }}px)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="heightDefault">Default</label>
-              <input
-                id="heightDefault"
-                v-model="state.heightDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="height"
             v-model.number="state.height"
             class="w-full"
             type="range"
-            :disabled="state.heightDefault"
             min="5"
             max="75"
           />
@@ -37,21 +28,12 @@
             <label class="block font-medium" for="cursorWidth"
               >The cursor width ({{ state.cursorWidth }}px)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="cursorWidthDefault">Default</label>
-              <input
-                id="cursorWidthDefault"
-                v-model="state.cursorWidthDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="cursorWidth"
             v-model.number="state.cursorWidth"
             class="w-full"
             type="range"
-            :disabled="state.cursorWidthDefault"
             min="0"
             max="10"
           />
@@ -62,21 +44,12 @@
             <label class="block font-medium" for="barWidth"
               >The bar width ({{ state.barWidth }}px)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="barWidthDefault">Default</label>
-              <input
-                id="barWidthDefault"
-                v-model="state.barWidthDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="barWidth"
             v-model.number="state.barWidth"
             class="w-full"
             type="range"
-            :disabled="state.barWidthDefault"
             min="0"
             max="10"
             step="0.1"
@@ -88,21 +61,12 @@
             <label class="block font-medium" for="barGap"
               >Spacing between bars ({{ state.barGap }}px)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="barGapDefault">Default</label>
-              <input
-                id="barGapDefault"
-                v-model="state.barGapDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="barGap"
             v-model.number="state.barGap"
             class="w-full"
             type="range"
-            :disabled="state.barGapDefault"
             min="0"
             max="10"
           />
@@ -113,21 +77,12 @@
             <label class="block font-medium" for="barRadius"
               >Rounded borders for bars ({{ state.barRadius }}px)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="barRadiusDefault">Default</label>
-              <input
-                id="barRadiusDefault"
-                v-model="state.barRadiusDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="barRadius"
             v-model.number="state.barRadius"
             class="w-full"
             type="range"
-            :disabled="state.barRadiusDefault"
             min="0"
             max="10"
           />
@@ -140,21 +95,12 @@
                 state.barHeight
               }}x)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="barHeightDefault">Default</label>
-              <input
-                id="barHeightDefault"
-                v-model="state.barHeightDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="barHeight"
             v-model.number="state.barHeight"
             class="w-full"
             type="range"
-            :disabled="state.barHeightDefault"
             min="0"
             max="1"
             step="0.05"
@@ -168,21 +114,12 @@
                 state.minPxPerSec
               }}x)</label
             >
-            <div class="flex items-center gap-2">
-              <label for="minPxPerSecDefault">Default</label>
-              <input
-                id="minPxPerSecDefault"
-                v-model="state.minPxPerSecDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="minPxPerSec"
             v-model.number="state.minPxPerSec"
             class="w-full"
             type="range"
-            :disabled="state.minPxPerSecDefault"
             min="0"
             max="100"
           />
@@ -194,21 +131,12 @@
             <label class="block font-medium" for="waveColor"
               >The color of the waveform</label
             >
-            <div class="flex items-center gap-2">
-              <label for="waveColorDefault">Default</label>
-              <input
-                id="waveColorDefault"
-                v-model="state.waveColorDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="waveColor"
             v-model="state.waveColor"
             class="w-full"
             type="color"
-            :disabled="state.waveColorDefault"
           />
         </div>
         <div class="space-y-2">
@@ -216,21 +144,12 @@
             <label class="block font-medium" for="progressColor"
               >The color of the progress mask</label
             >
-            <div class="flex items-center gap-2">
-              <label for="progressColorDefault">Default</label>
-              <input
-                id="progressColorDefault"
-                v-model="state.progressColorDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="progressColor"
             v-model="state.progressColor"
             class="w-full"
             type="color"
-            :disabled="state.progressColorDefault"
           />
         </div>
 
@@ -239,21 +158,12 @@
             <label class="block font-medium" for="cursorColor"
               >The color of the playpack cursor</label
             >
-            <div class="flex items-center gap-2">
-              <label for="cursorColorDefault">Default</label>
-              <input
-                id="cursorColorDefault"
-                v-model="state.cursorColorDefault"
-                type="checkbox"
-              />
-            </div>
           </div>
           <input
             id="cursorColor"
             v-model="state.cursorColor"
             class="w-full"
             type="color"
-            :disabled="state.cursorColorDefault"
           />
         </div>
       </div>
@@ -327,7 +237,15 @@
           </div>
         </div>
 
-        <div class="mt-4">
+        <div class="mt-4 space-y-4">
+          <button
+            class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
+            type="button"
+            :disabled="reRender"
+            @click="onResetToWaveformOptions"
+          >
+            Reset Waveform Options
+          </button>
           <button
             class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
             type="button"
@@ -585,7 +503,7 @@
           class="flex text-base items-center justify-center py-1 px-2 bg-zinc-800 rounded cursor-pointer border border-zinc-700 hover:border-emerald-500"
           type="button"
           :disabled="reRender"
-          @click="onResetToDefault"
+          @click="onResetToCSSConfig"
         >
           Reset CSS
         </button>
@@ -619,25 +537,15 @@ import { promiseTimeout } from "@vueuse/core";
 
 const stateDefault = {
   height: 50,
-  heightDefault: false,
   waveColor: "#ffffff",
-  waveColorDefault: false,
   progressColor: "#55da36",
-  progressColorDefault: false,
   cursorColor: "#55da36",
-  cursorColorDefault: false,
   cursorWidth: 1,
-  cursorWidthDefault: false,
   barWidth: 4,
-  barWidthDefault: false,
   barGap: 4,
-  barGapDefault: false,
   barRadius: 4,
-  barRadiusDefault: false,
   barHeight: 0.8,
-  barHeightDefault: false,
-  minPxPerSec: 10,
-  minPxPerSecDefault: true,
+  minPxPerSec: 0,
   autoScroll: false,
   autoCenter: false,
   hideScrollbar: false,
@@ -647,25 +555,15 @@ const stateDefault = {
 
 const state = ref<{
   height?: number;
-  heightDefault?: boolean;
   waveColor?: string;
-  waveColorDefault?: boolean;
   progressColor?: string;
-  progressColorDefault?: boolean;
   cursorColor?: string;
-  cursorColorDefault?: boolean;
   cursorWidth?: number;
-  cursorWidthDefault?: boolean;
   barWidth?: number;
-  barWidthDefault?: boolean;
   barGap?: number;
-  barGapDefault?: boolean;
   barRadius?: number;
-  barRadiusDefault?: boolean;
   barHeight?: number;
-  barHeightDefault?: boolean;
   minPxPerSec?: number;
-  minPxPerSecDefault?: boolean;
   autoScroll?: boolean;
   autoCenter?: boolean;
   hideScrollbar?: boolean;
@@ -690,95 +588,55 @@ const cssDefault = {
 const css = ref(JSON.parse(JSON.stringify(cssDefault)));
 
 const playerOptions = computed(() => {
-  const data = JSON.parse(JSON.stringify(state.value));
+  const data = state.value;
   // height
-  if (data.heightDefault) {
-    data.height = undefined;
-  } else if ((data.height ?? 0) > 75) {
+  if ((data.height ?? 0) > 75) {
     data.height = 75;
   } else if ((data.height ?? 0) < 5) {
     data.height = 5;
   }
-  data.heightDefault = undefined;
-
-  // waveColor
-  if (data.waveColorDefault) {
-    data.waveColor = undefined;
-  }
-  data.waveColorDefault = undefined;
-
-  // progressColor
-  if (data.progressColorDefault) {
-    data.progressColor = undefined;
-  }
-  data.progressColorDefault = undefined;
-
-  // cursorColor
-  if (data.cursorColorDefault) {
-    data.cursorColor = undefined;
-  }
-  data.cursorColorDefault = undefined;
 
   // cursorWidth
-  if (data.cursorWidthDefault) {
-    data.cursorWidth = undefined;
-  } else if ((data.cursorWidth ?? 0) > 10) {
+  if ((data.cursorWidth ?? 0) > 10) {
     data.cursorWidth = 10;
   } else if ((data.height ?? 0) < 0) {
     data.cursorWidth = 0;
   }
-  data.cursorWidthDefault = undefined;
 
   // barWidth
-  if (data.barWidthDefault) {
-    data.barWidth = undefined;
-  } else if ((data.barWidth ?? 0) > 10) {
+  if ((data.barWidth ?? 0) > 10) {
     data.barWidth = 10;
   } else if ((data.barWidth ?? 0) < 0) {
     data.barWidth = 0;
   }
 
-  data.barWidthDefault = undefined;
-
   // barGap
-  if (data.barGapDefault) {
-    data.barGap = undefined;
-  } else if ((data.barGap ?? 0) > 10) {
+  if ((data.barGap ?? 0) > 10) {
     data.barGap = 10;
   } else if ((data.barGap ?? 0) < 0) {
     data.barGap = 0;
   }
-  data.barGapDefault = undefined;
 
   // barRadius
-  if (data.barRadiusDefault) {
-    data.barRadius = undefined;
-  } else if ((data.barRadius ?? 0) > 10) {
+  if ((data.barRadius ?? 0) > 10) {
     data.barRadius = 10;
   } else if ((data.barRadius ?? 0) < 0) {
     data.barRadius = 0;
   }
-  data.barRadiusDefault = undefined;
 
   // barHeight
-  if (data.barHeightDefault) {
-    data.barHeight = undefined;
-  } else if ((data.barHeight ?? 0) > 1) {
+  if ((data.barHeight ?? 0) > 1) {
     data.barHeight = 1;
   } else if ((data.barHeight ?? 0) < 0) {
     data.barHeight = 0;
   }
-  data.barHeightDefault = undefined;
 
   // minPxPerSec
-  if (data.minPxPerSecDefault) {
-    data.minPxPerSec = undefined;
-  } else if ((data.minPxPerSec ?? 0) > 100) {
+  if ((data.minPxPerSec ?? 0) > 100) {
     data.minPxPerSec = 100;
   } else if ((data.minPxPerSec ?? 0) < 0) {
     data.minPxPerSec = 0;
   }
-  data.minPxPerSecDefault = undefined;
 
   return data;
 });
@@ -904,7 +762,13 @@ const returnCSS = computed(() => {
   };
 });
 
-const onResetToDefault = async () => {
+const onResetToWaveformOptions = async () => {
+  for (const key of Object.keys(state.value)) {
+    state.value[key] = stateDefault[key];
+  }
+};
+
+const onResetToCSSConfig = async () => {
   css.value = JSON.parse(JSON.stringify(cssDefault));
 };
 

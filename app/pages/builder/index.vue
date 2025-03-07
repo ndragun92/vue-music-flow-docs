@@ -17,16 +17,16 @@
               <label for="heightDefault">Default</label>
               <input
                 id="heightDefault"
-                type="checkbox"
                 v-model="state.heightDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="height"
+            v-model.number="state.height"
             class="w-full"
             type="range"
-            v-model.number="state.height"
             :disabled="state.heightDefault"
             min="5"
             max="75"
@@ -41,16 +41,16 @@
               <label for="cursorWidthDefault">Default</label>
               <input
                 id="cursorWidthDefault"
-                type="checkbox"
                 v-model="state.cursorWidthDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="cursorWidth"
+            v-model.number="state.cursorWidth"
             class="w-full"
             type="range"
-            v-model.number="state.cursorWidth"
             :disabled="state.cursorWidthDefault"
             min="0"
             max="10"
@@ -66,16 +66,16 @@
               <label for="barWidthDefault">Default</label>
               <input
                 id="barWidthDefault"
-                type="checkbox"
                 v-model="state.barWidthDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="barWidth"
+            v-model.number="state.barWidth"
             class="w-full"
             type="range"
-            v-model.number="state.barWidth"
             :disabled="state.barWidthDefault"
             min="0"
             max="10"
@@ -92,16 +92,16 @@
               <label for="barGapDefault">Default</label>
               <input
                 id="barGapDefault"
-                type="checkbox"
                 v-model="state.barGapDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="barGap"
+            v-model.number="state.barGap"
             class="w-full"
             type="range"
-            v-model.number="state.barGap"
             :disabled="state.barGapDefault"
             min="0"
             max="10"
@@ -117,16 +117,16 @@
               <label for="barRadiusDefault">Default</label>
               <input
                 id="barRadiusDefault"
-                type="checkbox"
                 v-model="state.barRadiusDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="barRadius"
+            v-model.number="state.barRadius"
             class="w-full"
             type="range"
-            v-model.number="state.barRadius"
             :disabled="state.barRadiusDefault"
             min="0"
             max="10"
@@ -144,16 +144,16 @@
               <label for="barHeightDefault">Default</label>
               <input
                 id="barHeightDefault"
-                type="checkbox"
                 v-model="state.barHeightDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="barHeight"
+            v-model.number="state.barHeight"
             class="w-full"
             type="range"
-            v-model.number="state.barHeight"
             :disabled="state.barHeightDefault"
             min="0"
             max="1"
@@ -172,16 +172,16 @@
               <label for="minPxPerSecDefault">Default</label>
               <input
                 id="minPxPerSecDefault"
-                type="checkbox"
                 v-model="state.minPxPerSecDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="minPxPerSec"
+            v-model.number="state.minPxPerSec"
             class="w-full"
             type="range"
-            v-model.number="state.minPxPerSec"
             :disabled="state.minPxPerSecDefault"
             min="0"
             max="100"
@@ -198,17 +198,17 @@
               <label for="waveColorDefault">Default</label>
               <input
                 id="waveColorDefault"
-                type="checkbox"
                 v-model="state.waveColorDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="waveColor"
+            v-model="state.waveColor"
             class="w-full"
             type="color"
             :disabled="state.waveColorDefault"
-            v-model="state.waveColor"
           />
         </div>
         <div class="space-y-2">
@@ -220,17 +220,17 @@
               <label for="progressColorDefault">Default</label>
               <input
                 id="progressColorDefault"
-                type="checkbox"
                 v-model="state.progressColorDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="progressColor"
+            v-model="state.progressColor"
             class="w-full"
             type="color"
             :disabled="state.progressColorDefault"
-            v-model="state.progressColor"
           />
         </div>
 
@@ -243,17 +243,17 @@
               <label for="cursorColorDefault">Default</label>
               <input
                 id="cursorColorDefault"
-                type="checkbox"
                 v-model="state.cursorColorDefault"
+                type="checkbox"
               />
             </div>
           </div>
           <input
             id="cursorColor"
+            v-model="state.cursorColor"
             class="w-full"
             type="color"
             :disabled="state.cursorColorDefault"
-            v-model="state.cursorColor"
           />
         </div>
       </div>
@@ -267,8 +267,8 @@
             <div class="flex items-center">
               <input
                 id="autoScroll"
-                type="checkbox"
                 v-model="state.autoScroll"
+                type="checkbox"
               />
             </div>
           </div>
@@ -283,8 +283,8 @@
             <div class="flex items-center">
               <input
                 id="autoCenter"
-                type="checkbox"
                 v-model="state.autoCenter"
+                type="checkbox"
               />
             </div>
           </div>
@@ -298,8 +298,8 @@
             <div class="flex items-center">
               <input
                 id="hideScrollbar"
-                type="checkbox"
                 v-model="state.hideScrollbar"
+                type="checkbox"
               />
             </div>
           </div>
@@ -311,7 +311,7 @@
               >Pass false to disable clicks on the waveform</label
             >
             <div class="flex items-center">
-              <input id="interact" type="checkbox" v-model="state.interact" />
+              <input id="interact" v-model="state.interact" type="checkbox" />
             </div>
           </div>
         </div>
@@ -322,7 +322,7 @@
               >Play the audio on load</label
             >
             <div class="flex items-center">
-              <input id="autoplay" type="checkbox" v-model="state.autoplay" />
+              <input id="autoplay" v-model="state.autoplay" type="checkbox" />
             </div>
           </div>
         </div>
@@ -356,9 +356,9 @@
           </div>
           <input
             id="colorPrimaryDark"
+            v-model="css.colorPrimaryDark"
             class="w-full"
             type="color"
-            v-model="css.colorPrimaryDark"
           />
         </div>
 
@@ -377,9 +377,9 @@
           </div>
           <input
             id="colorPrimary"
+            v-model="css.colorPrimary"
             class="w-full"
             type="color"
-            v-model="css.colorPrimary"
           />
         </div>
 
@@ -398,9 +398,9 @@
           </div>
           <input
             id="colorSecondary"
+            v-model="css.colorSecondary"
             class="w-full"
             type="color"
-            v-model="css.colorSecondary"
           />
         </div>
 
@@ -419,9 +419,9 @@
           </div>
           <input
             id="colorPrimaryBorder"
+            v-model="css.colorPrimaryBorder"
             class="w-full"
             type="color"
-            v-model="css.colorPrimaryBorder"
           />
         </div>
 
@@ -440,9 +440,9 @@
           </div>
           <input
             id="colorPrimaryHover"
+            v-model="css.colorPrimaryHover"
             class="w-full"
             type="color"
-            v-model="css.colorPrimaryHover"
           />
         </div>
 
@@ -461,9 +461,9 @@
           </div>
           <input
             id="colorPrimaryActive"
+            v-model="css.colorPrimaryActive"
             class="w-full"
             type="color"
-            v-model="css.colorPrimaryActive"
           />
         </div>
 
@@ -484,9 +484,9 @@
           </div>
           <input
             id="colorPrimaryTypography"
+            v-model="css.colorPrimaryTypography"
             class="w-full"
             type="color"
-            v-model="css.colorPrimaryTypography"
           />
         </div>
 
@@ -508,9 +508,9 @@
           </div>
           <input
             id="colorSecondaryTypography"
+            v-model="css.colorSecondaryTypography"
             class="w-full"
             type="color"
-            v-model="css.colorSecondaryTypography"
           />
         </div>
 
@@ -532,9 +532,9 @@
           </div>
           <input
             id="scrollBarBackgroundLight"
+            v-model="css.scrollBarBackgroundLight"
             class="w-full"
             type="color"
-            v-model="css.scrollBarBackgroundLight"
           />
         </div>
 
@@ -553,9 +553,9 @@
           </div>
           <input
             id="scrollBarBackground"
+            v-model="css.scrollBarBackground"
             class="w-full"
             type="color"
-            v-model="css.scrollBarBackground"
           />
         </div>
 
@@ -574,9 +574,9 @@
           </div>
           <input
             id="scrollBarSlider"
+            v-model="css.scrollBarSlider"
             class="w-full"
             type="color"
-            v-model="css.scrollBarSlider"
           />
         </div>
       </div>
@@ -609,7 +609,7 @@
     </div>
   </div>
   <client-only>
-    <MusicFlow :style="returnCSS" v-if="!reRender" :options="playerOptions" />
+    <MusicFlow v-if="!reRender" :style="returnCSS" :options="playerOptions" />
   </client-only>
 </template>
 
@@ -869,21 +869,24 @@ const tracks = [
     },
   },
 ];
-const { onPlayAsPlaylist, onClose } = useMusicFlow();
+const { onPlayAsPlaylist, onClose, wavesurfer } = useMusicFlow();
 
 const reRender = ref(false);
 
 watchDebounced(
   playerOptions,
-  async () => {
-    await onRefreshPlayer();
+  (_options) => {
+    wavesurfer?.value?.setOptions(JSON.parse(JSON.stringify(_options)));
   },
   {
     debounce: 1000,
     deep: true,
-    immediate: true,
   },
 );
+
+onMounted(async () => {
+  await onRefreshPlayer();
+});
 
 const returnCSS = computed(() => {
   return {

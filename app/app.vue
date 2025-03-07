@@ -40,10 +40,13 @@
       </Head>
     </Html>
     <NuxtPage />
+    <Analytics />
   </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
+import { Analytics } from "@vercel/analytics/nuxt";
+
 const nuxtApp = useNuxtApp();
 
 const title = "Vue Music Flow";

@@ -1,10 +1,10 @@
 <template>
   <NuxtLoadingIndicator />
   <NuxtLayout>
-    <Html lang="en" version="3" :data-route-path="$route?.path">
+    <Html lang="en" version="4" :data-route-path="$route?.path">
       <Head>
         <Title>{{ title }}</Title>
-        <meta name="color-scheme" content="dark" />
+        <Meta name="color-scheme" content="dark" />
         <Meta name="language" content="en" />
         <Meta property="og:title" :content="title" />
         <Meta name="twitter:title" :content="title" />

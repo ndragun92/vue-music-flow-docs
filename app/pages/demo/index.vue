@@ -85,7 +85,7 @@
     >
       <NuxtImg
         class="object-cover object-bottom size-full"
-        src="/images/cover.jpg"
+        src="https://ik.imagekit.io/ltdassets/public/images/cover.jpg"
         alt="Hero Image"
         format="webp"
         sizes="100vw sm:640px md:768px lg:1024px"
@@ -360,42 +360,42 @@ type AlbumData = {
 const albums: AlbumData[] = [
   {
     id: 1,
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     genre: "EDM",
     album: "All World Music",
     slug: "edm",
   },
   {
     id: 2,
-    artwork: "/images/xmass.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
     genre: "Christmas",
     album: "The Christmas Album",
     slug: "xmass",
   },
   {
     id: 3,
-    artwork: "/images/chill.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
     genre: "Chill",
     album: "Moonlit Vibes",
     slug: "chill",
   },
   {
     id: 4,
-    artwork: "/images/pop-dance.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/pop-dance.jpg",
     genre: "Pop Dance",
     album: "Rhythm Radiance",
     slug: "pop-dance",
   },
   {
     id: 5,
-    artwork: "/images/metal.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/metal.jpg",
     genre: "Metal",
     album: "Rage Reforged",
     slug: "metal",
   },
   {
     id: 6,
-    artwork: "/images/blues.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/blues.jpg",
     genre: "Blues",
     album: "Midnight Groans",
     slug: "blues",

@@ -2,10 +2,10 @@ export default defineEventHandler(() => {
   return [
     {
       id: 15,
-      audio: "/audio/chill/lofi-chillhop/lunar-breeze.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/lunar-breeze.mp3",
       title: "Lunar Breeze",
       artist: "Nujabes",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Lofi, Ambient, Chill",
@@ -16,10 +16,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 16,
-      audio: "/audio/chill/lofi-chillhop/rainy-day.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/rainy-day.mp3",
       title: "Rainy Day",
       artist: "Tomppabeats",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Lofi, Chillhop, Mellow",
@@ -30,10 +30,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 17,
-      audio: "/audio/chill/lofi-chillhop/cats-dreams.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/cats-dreams.mp3",
       title: "Cat's Dreams",
       artist: "Idealism",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Calm, Cozy, Lofi, Dreams",
@@ -44,10 +44,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 18,
-      audio: "/audio/chill/lofi-chillhop/photograph.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/photograph.mp3",
       title: "Photograph",
       artist: "Joji",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Mesmerizing, Instrumental",
@@ -58,10 +58,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 19,
-      audio: "/audio/chill/lofi-chillhop/polar-lights.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/polar-lights.mp3",
       title: "Polar Lights",
       artist: "Jinsang",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Chill, Vibes, Lofi",
@@ -72,10 +72,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 20,
-      audio: "/audio/chill/lofi-chillhop/snow.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/snow.mp3",
       title: "Snow",
       artist: "Saib",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Snow, Instrumental",
@@ -86,10 +86,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 21,
-      audio: "/audio/chill/lofi-chillhop/melt.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/melt.mp3",
       title: "Melt",
       artist: "Kudasai",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Beautiful Lofi",
@@ -100,10 +100,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 22,
-      audio: "/audio/chill/lofi-chillhop/aura.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/aura.mp3",
       title: "Aura",
       artist: "Ezzy",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Cosmic Lofi",
@@ -114,10 +114,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 23,
-      audio: "/audio/chill/lofi-chillhop/over-the-moon.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/over-the-moon.mp3",
       title: "Over The Moon",
       artist: "sadtoi",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Chill, Lofi, Relaxation",
@@ -128,10 +128,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 24,
-      audio: "/audio/chill/lofi-chillhop/after-you.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/chill/lofi-chillhop/after-you.mp3",
       title: "After You",
       artist: "Sleepy Fish",
-      artwork: "/images/chill.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/chill.jpg",
       album: "Moonlit Vibes",
       original: {
         genre: "Relaxing, Chill, Ambient",

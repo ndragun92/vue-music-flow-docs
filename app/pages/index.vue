@@ -2,11 +2,11 @@
   <div class="@container container mx-auto">
     <h2 class="text-3xl font-semibold mb-4">Overview</h2>
     <div class="space-y-2">
-      <div class="flex items-center gap-0.5 text-sm">
+      <div class="flex lg:items-center flex-col md:flex-row gap-0.5 text-sm">
         <div>{{ data?.["dist-tags"]?.latest }} is latest version</div>
-        <div><Icon name="mdi:dot" size="24" /></div>
+        <div class="hidden md:block"><Icon name="mdi:dot" size="24" /></div>
         <div class="text-emerald-500">Public</div>
-        <div><Icon name="mdi:dot" size="24" /></div>
+        <div class="hidden md:block"><Icon name="mdi:dot" size="24" /></div>
         <div>last update was {{ updated }}</div>
       </div>
     </div>

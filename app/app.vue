@@ -18,25 +18,25 @@
         <Meta name="twitter:description" :content="description" />
         <Meta
           property="og:image"
-          :content="`${nuxtApp?.$app_origin}/social.jpg`"
+          :content="`https://ik.imagekit.io/ltdassets/public/social.jpg`"
         />
         <Meta
           name="twitter:image"
-          :content="`${nuxtApp?.$app_origin}/twitter.jpg`"
+          :content="`https://ik.imagekit.io/ltdassets/public/twitter.jpg`"
         />
         <Meta name="twitter:card" content="summary_large_image" />
         <Meta name="twitter:site" content="@nemanjadragun" />
         <Meta name="twitter:creator" content="@nemanjadragun" />
-        <Meta property="og:site_name" content="/favicon.png" />
-        <Meta name="twitter:site" content="/favicon.png" />
+        <Meta property="og:site_name" content="https://ik.imagekit.io/ltdassets/public/favicon.png" />
+        <Meta name="twitter:site" content="https://ik.imagekit.io/ltdassets/public/favicon.png" />
         <Meta name="url" :content="`${nuxtApp?.$app_origin}${$route?.path}`" />
         <Meta
           property="og:url"
           :content="`${nuxtApp?.$app_origin}${$route?.path}`"
         />
-        <Link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <Link rel="apple-touch-icon" type="image/png" href="/favicon.png" />
-        <Link rel="apple-touch-startup-image" href="/favicon.ico" />
+        <Link rel="icon" type="image/x-icon" href="https://ik.imagekit.io/ltdassets/public/favicon.ico" />
+        <Link rel="apple-touch-icon" type="image/png" href="https://ik.imagekit.io/ltdassets/public/favicon.png" />
+        <Link rel="apple-touch-startup-image" href="https://ik.imagekit.io/ltdassets/public/favicon.ico" />
       </Head>
     </Html>
     <NuxtPage />

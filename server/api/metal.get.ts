@@ -2,10 +2,10 @@ export default defineEventHandler(() => {
   return [
     {
       id: 30,
-      audio: "/audio/metal/rage-reforged/psychedelic.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/metal/rage-reforged/psychedelic.mp3",
       title: "Psychedelic",
       artist: "Iron Revenant",
-      artwork: "/images/metal.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/metal.jpg",
       album: "Rage Reforged",
       original: {
         genre: "Psychedelic, Blues Rock",
@@ -16,10 +16,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 31,
-      audio: "/audio/metal/rage-reforged/intense-thrash-metal.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/metal/rage-reforged/intense-thrash-metal.mp3",
       title: "Intense Thrash Metal",
       artist: "Obsidian Wrath",
-      artwork: "/images/metal.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/metal.jpg",
       album: "Rage Reforged",
       original: {
         genre: "Thrash Metal",
@@ -30,10 +30,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 32,
-      audio: "/audio/metal/rage-reforged/old-school.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/metal/rage-reforged/old-school.mp3",
       title: "Old School",
       artist: "Steel Serpent",
-      artwork: "/images/metal.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/metal.jpg",
       album: "Rage Reforged",
       original: {
         genre: "Thrash Metal, Heavy Metal",
@@ -44,10 +44,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 33,
-      audio: "/audio/metal/rage-reforged/epic.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/metal/rage-reforged/epic.mp3",
       title: "Epic",
       artist: "Crucible Dominion",
-      artwork: "/images/metal.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/metal.jpg",
       album: "Rage Reforged",
       original: {
         genre: "Thrash Metal",

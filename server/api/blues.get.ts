@@ -2,10 +2,10 @@ export default defineEventHandler(() => {
   return [
     {
       id: 34,
-      audio: "/audio/blues/midnight-groans/gritty-kansas.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/blues/midnight-groans/gritty-kansas.mp3",
       title: "Gritty Kansas",
       artist: "Smokey Rivers",
-      artwork: "/images/blues.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/blues.jpg",
       album: "Midnight Groans",
       original: {
         genre: "Blues, Gritty Blues",
@@ -16,10 +16,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 35,
-      audio: "/audio/blues/midnight-groans/far-away.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/blues/midnight-groans/far-away.mp3",
       title: "Far Away",
       artist: "Velvet Mae",
-      artwork: "/images/blues.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/blues.jpg",
       album: "Midnight Groans",
       original: {
         genre: "Blues, Harmonica",

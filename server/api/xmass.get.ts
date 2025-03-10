@@ -2,10 +2,10 @@ export default defineEventHandler(() => {
   return [
     {
       id: 7,
-      audio: "/audio/xmass/ludo-sound-x/happy-xmas-happy-new-year-2025.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/happy-xmas-happy-new-year-2025.mp3",
       title: "Happy Xmas - Happy New Year 2025",
       artist: "Holly Snowell",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Xmas, Happy Christmas",
@@ -16,10 +16,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 8,
-      audio: "/audio/xmass/ludo-sound-x/christmas-piano.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/christmas-piano.mp3",
       title: "Christmas Piano",
       artist: "Jingle Harmonies",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Xmas, Happy Christmas",
@@ -30,10 +30,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 9,
-      audio: "/audio/xmass/ludo-sound-x/happy-xmas-christmas-music.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/happy-xmas-christmas-music.mp3",
       title: "Happy Xmas - Christmas Music",
       artist: "Noel Winterson",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Santa, Happy Xmas, Xmas",
@@ -45,10 +45,10 @@ export default defineEventHandler(() => {
     {
       id: 10,
       audio:
-        "/audio/xmass/ludo-sound-x/happy-xmas-jingle-bells-happy-christmas.mp3",
+        "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/happy-xmas-jingle-bells-happy-christmas.mp3",
       title: "Happy Xmas - Jingle Bells - Happy Christmas",
       artist: "Crystal Carols",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Xmas, Happy Christmas",
@@ -59,10 +59,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 11,
-      audio: "/audio/xmass/ludo-sound-x/merry-christmas-happy-xmas.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/merry-christmas-happy-xmas.mp3",
       title: "Merry Christmas - Happy Xmas",
       artist: "Frosty Serenade",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Merry Christmas, Xmas",
@@ -74,10 +74,10 @@ export default defineEventHandler(() => {
     {
       id: 12,
       audio:
-        "/audio/xmass/ludo-sound-x/christmas-mood-music-merry-christmas.mp3",
+        "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/christmas-mood-music-merry-christmas.mp3",
       title: "Christmas Mood Music - Merry Christmas",
       artist: "Gabriel Starlight",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Christmas Mood, Music",
@@ -88,10 +88,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 13,
-      audio: "/audio/xmass/ludo-sound-x/christmas-music-merry-christmas.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/christmas-music-merry-christmas.mp3",
       title: "Christmas Music - Merry Christmas",
       artist: "Evergreen Voices",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Christmas Music",
@@ -102,10 +102,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 14,
-      audio: "/audio/xmass/ludo-sound-x/happy-christmas-day.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/xmass/ludo-sound-x/happy-christmas-day.mp3",
       title: "Happy Christmas Day",
       artist: "St. Nick's Melod",
-      artwork: "/images/xmass.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/xmass.jpg",
       album: "The Christmas Album",
       original: {
         genre: "Christmas, Holiday",

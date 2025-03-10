@@ -2,10 +2,10 @@ export default defineEventHandler(() => {
   return [
     {
       id: 25,
-      audio: "/audio/pop-dance/rhythm-radiance/electric-love.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/pop-dance/rhythm-radiance/electric-love.mp3",
       title: "Electric Love",
       artist: "Luna Voltage",
-      artwork: "/images/pop-dance.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/pop-dance.jpg",
       album: "Rhythm Radiance",
       original: {
         genre: "Pop Dance, Upbeat, Pop",
@@ -16,10 +16,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 26,
-      audio: "/audio/pop-dance/rhythm-radiance/dancing-hearts.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/pop-dance/rhythm-radiance/dancing-hearts.mp3",
       title: "Dancing Hearts",
       artist: "Echo Nova",
-      artwork: "/images/pop-dance.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/pop-dance.jpg",
       album: "Rhythm Radiance",
       original: {
         genre: "Pop Dance, Upbeat, Pop",
@@ -30,10 +30,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 27,
-      audio: "/audio/pop-dance/rhythm-radiance/rhythm-of-us.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/pop-dance/rhythm-radiance/rhythm-of-us.mp3",
       title: "Rhythm of Us",
       artist: "Starlight Pulse",
-      artwork: "/images/pop-dance.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/pop-dance.jpg",
       album: "Rhythm Radiance",
       original: {
         genre: "Pop Dance, Upbeat, Pop",
@@ -44,10 +44,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 28,
-      audio: "/audio/pop-dance/rhythm-radiance/rhythm-of-the-night.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/pop-dance/rhythm-radiance/rhythm-of-the-night.mp3",
       title: "Rhythm of the Night",
       artist: "Velvet Frequency",
-      artwork: "/images/pop-dance.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/pop-dance.jpg",
       album: "Rhythm Radiance",
       original: {
         genre: "Pop Dance, Upbeat, Pop",
@@ -58,10 +58,10 @@ export default defineEventHandler(() => {
     },
     {
       id: 29,
-      audio: "/audio/pop-dance/rhythm-radiance/glow-tonight.mp3",
+      audio: "https://ik.imagekit.io/ltdassets/public/audio/pop-dance/rhythm-radiance/glow-tonight.mp3",
       title: "Glow Tonight",
       artist: "Neon Reverie",
-      artwork: "/images/pop-dance.jpg",
+      artwork: "https://ik.imagekit.io/ltdassets/public/images/pop-dance.jpg",
       album: "Rhythm Radiance",
       original: {
         genre: "Pop Dance, Upbeat, Pop",

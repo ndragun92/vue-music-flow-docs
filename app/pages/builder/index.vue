@@ -644,10 +644,10 @@ const playerOptions = computed(() => {
 const tracks = [
   {
     id: 1,
-    audio: "/audio/edm/all-world-music/dreamy-slow.mp3",
+    audio: "https://ik.imagekit.io/ltdassets/public/audio/edm/all-world-music/dreamy-slow.mp3",
     title: "Dreamy Slow",
     artist: "Anoushka Rahman",
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     album: "All World Music",
     original: {
       genre: "Dreamy, Slow, EDM",
@@ -658,10 +658,10 @@ const tracks = [
   },
   {
     id: 2,
-    audio: "/audio/edm/all-world-music/electronic-mysterious-ambient-abyss.mp3",
+    audio: "https://ik.imagekit.io/ltdassets/public/audio/edm/all-world-music/electronic-mysterious-ambient-abyss.mp3",
     title: "Electronic Mysterious Ambient Abyss",
     artist: "Carlos Mendes",
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     album: "All World Music",
     original: {
       genre: "EDM, Electronic",
@@ -672,10 +672,10 @@ const tracks = [
   },
   {
     id: 3,
-    audio: "/audio/edm/all-world-music/epic-fast-bitwise.mp3",
+    audio: "https://ik.imagekit.io/ltdassets/public/audio/edm/all-world-music/epic-fast-bitwise.mp3",
     title: "Epic Fast Bitwise",
     artist: "Ayaka Saito",
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     album: "All World Music",
     original: {
       genre: "Epic, Fast, Bitwise, EDM",
@@ -686,10 +686,10 @@ const tracks = [
   },
   {
     id: 4,
-    audio: "/audio/edm/all-world-music/fast-glitchy.mp3",
+    audio: "https://ik.imagekit.io/ltdassets/public/audio/edm/all-world-music/fast-glitchy.mp3",
     title: "Fast Glitchy",
     artist: "Kwame Biko",
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     album: "All World Music",
     original: {
       genre: "Fast, EDM, Glitchy, Music",
@@ -700,10 +700,10 @@ const tracks = [
   },
   {
     id: 5,
-    audio: "/audio/edm/all-world-music/high-energy.mp3",
+    audio: "https://ik.imagekit.io/ltdassets/public/audio/edm/all-world-music/high-energy.mp3",
     title: "High Energy",
     artist: "Elena Petrova",
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     album: "All World Music",
     original: {
       genre: "High-energy, EDM",
@@ -714,10 +714,10 @@ const tracks = [
   },
   {
     id: 6,
-    audio: "/audio/edm/all-world-music/lightning-pulse.mp3",
+    audio: "https://ik.imagekit.io/ltdassets/public/audio/edm/all-world-music/lightning-pulse.mp3",
     title: "Lightning Pulse",
     artist: "Amara Mbaye",
-    artwork: "/images/edm.jpg",
+    artwork: "https://ik.imagekit.io/ltdassets/public/images/edm.jpg",
     album: "All World Music",
     original: {
       genre: "Music, Melody, EDM, Fast",

@@ -10,7 +10,7 @@
       <div class="flex items-center gap-4 mb-8">
         <NuxtImg
           class="size-8"
-          src="/images/logo.png"
+          src="https://ik.imagekit.io/ltdassets/public/images/logo.png"
           alt="Vue Music Flow - NPM Package"
         />
         <h1 class="font-semibold text-xl">

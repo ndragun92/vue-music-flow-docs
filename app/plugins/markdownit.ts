@@ -31,6 +31,32 @@ export default defineNuxtPlugin(() => {
     },
   });
 
+  const defaultRender =
+    renderer.renderer.rules.link_open ||
+    function (tokens, idx, options, env, self) {
+      return self.renderToken(tokens, idx, options);
+    };
+
+  renderer.renderer.rules.link_open = function (
+    tokens,
+    idx,
+    options,
+    env,
+    self,
+  ) {
+    const token = tokens[idx];
+
+    // Add 'target' as "_blank" to links
+    const hrefIndex = token.attrIndex("target");
+    if (hrefIndex < 0) {
+      token.attrPush(["target", "_blank"]); // Add target="_blank"
+    } else {
+      token.attrs[hrefIndex][1] = "_blank"; // Replace existing target
+    }
+
+    return defaultRender(tokens, idx, options, env, self);
+  };
+
   // Provide the renderer globally
   return {
     provide: {

@@ -18,11 +18,11 @@
         <Meta name="twitter:description" :content="description" />
         <Meta
           property="og:image"
-          :content="`https://ik.imagekit.io/ltdassets/public/social.jpg`"
+          :content="`https://ik.imagekit.io/ltdassets/public/social.jpg?updatedAt=1741803287465`"
         />
         <Meta
           name="twitter:image"
-          :content="`https://ik.imagekit.io/ltdassets/public/twitter.jpg`"
+          :content="`https://ik.imagekit.io/ltdassets/public/twitter.jpg?updatedAt=1741803407933`"
         />
         <Meta name="twitter:card" content="summary_large_image" />
         <Meta name="twitter:site" content="@nemanjadragun" />
@@ -37,16 +37,16 @@
         <Link
           rel="icon"
           type="image/x-icon"
-          href="https://ik.imagekit.io/ltdassets/public/favicon.ico"
+          href="https://ik.imagekit.io/ltdassets/public/favicon.ico?updatedAt=1741803477620"
         />
         <Link
           rel="apple-touch-icon"
           type="image/png"
-          href="https://ik.imagekit.io/ltdassets/public/favicon.png"
+          href="https://ik.imagekit.io/ltdassets/public/favicon.png?updatedAt=1741803436602"
         />
         <Link
           rel="apple-touch-startup-image"
-          href="https://ik.imagekit.io/ltdassets/public/favicon.ico"
+          href="https://ik.imagekit.io/ltdassets/public/favicon.ico?updatedAt=1741803477620"
         />
       </Head>
     </Html>

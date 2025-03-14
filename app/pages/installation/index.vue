@@ -7,7 +7,18 @@
       Recommended Node.js version is
       <strong class="text-white">v22.x or higher</strong>
     </div>
-    <ElTerminal :commands="['npm i vue-music-flow']">
+    <h3 class="text-lg font-medium">Vue 3</h3>
+    <ElTerminal
+      :commands="['npm i vue-music-flow']"
+      code="npm i vue-music-flow"
+    >
+      <template #file>Terminal</template>
+    </ElTerminal>
+    <h3 class="text-lg font-medium">Nuxt 3</h3>
+    <ElTerminal
+      :commands="['npx nuxi module add nuxt-music-flow']"
+      code="npx nuxi module add nuxt-music-flow"
+    >
       <template #file>Terminal</template>
     </ElTerminal>
     <div class="flex justify-between items-center">
@@ -32,3 +43,4 @@
     </div>
   </div>
 </template>
+<script setup lang="ts"></script>

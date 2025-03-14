@@ -66,7 +66,7 @@
             <a
               class="underline inline-block hover:text-emerald-500 transition-colors truncate"
               :href="data?.homepage"
-              >{{ data?.homepage }}</a
+              >{{ data?.homepage?.replace("https://", "").replace("/", "") }}</a
             >
           </div>
         </div>

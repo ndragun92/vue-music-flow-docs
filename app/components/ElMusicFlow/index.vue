@@ -12,7 +12,7 @@
         aria-label="Mark as favorite"
         @click="
           track?.original
-            ? (track.original!.isFavorite = !track.original!.isFavorite)
+            ? (track.original.isFavorite = !track.original.isFavorite)
             : null
         "
       >
@@ -27,7 +27,3 @@
     </template>
   </MusicFlow>
 </template>
-
-<script setup lang="ts">
-import { MusicFlow } from "vue-music-flow";
-</script>

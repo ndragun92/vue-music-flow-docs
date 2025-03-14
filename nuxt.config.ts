@@ -16,10 +16,6 @@ export default defineNuxtConfig({
     strict: process.env.NODE_ENV === "development",
   },
 
-  build: {
-    transpile: ["vue-music-flow"],
-  },
-
   experimental: {
     defaults: {
       nuxtLink: {
@@ -83,11 +79,12 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/eslint",
-    "@nuxt/fonts",
-    "@pinia/nuxt", // https://pinia.vuejs.org/ssr/nuxt.html
-    "nuxt-icon", // https://github.com/nuxt-modules/icon | https://icones.js.org/collection/all?s=github
-    "@vueuse/nuxt", // https://vueuse.org/guide/#nuxt
-    "@nuxt/image", // https://image.nuxt.com
+    "@nuxt/fonts", // https://pinia.vuejs.org/ssr/nuxt.html
+    "@pinia/nuxt", // https://github.com/nuxt-modules/icon | https://icones.js.org/collection/all?s=github
+    "nuxt-icon", // https://vueuse.org/guide/#nuxt
+    "@vueuse/nuxt", // https://image.nuxt.com
+    "@nuxt/image",
+    "nuxt-music-flow",
   ],
 
   image: {},

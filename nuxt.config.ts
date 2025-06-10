@@ -37,10 +37,10 @@ export default defineNuxtConfig({
   nitro: {
     // compressPublicAssets: true,
     routeRules: {
-      "/_nuxt/**": { headers: { "cache-control": "max-age=600" } }, // Set generated files cache to 10 minutes
-      "/audio/**": { headers: { "cache-control": "max-age=600" } }, // Set generated files cache to 10 minutes
-      "/images/**": { headers: { "cache-control": "max-age=600" } }, // Set generated files cache to 10 minutes
-      "/_ipx/**": { headers: { "cache-control": "max-age=600" } }, // Set generated files cache to 10 minutes
+      "/_nuxt/**": { headers: { "cache-control": "max-age=600" } }, // Set the generated files cache to 10 minutes
+      "/audio/**": { headers: { "cache-control": "max-age=600" } }, // Set the generated files cache to 10 minutes
+      "/images/**": { headers: { "cache-control": "max-age=600" } }, // Set the generated files cache to 10 minutes
+      "/_ipx/**": { headers: { "cache-control": "max-age=600" } }, // Set the generated files cache to 10 minutes
       "/": { isr: 60 }, // revalidated every 60 seconds, in the background
       "/getting-started": { prerender: true },
       "/installation": { prerender: true },

@@ -45,15 +45,15 @@ const code = `:root, :host {
   --breakpoint-phone: 40rem;
   --breakpoint-tablet: 80rem;
 
-  --color-primary-dark: oklch(0.145 0 0);
-  --color-primary: oklch(0.269 0 0);
-  --color-primary-border: oklch(0.205 0 0);
-  --color-primary-hover: oklch(0.75 0.183 55.934);
-  --color-primary-active: oklch(0.837 0.128 66.29);
-  --color-primary-typography: oklch(0.985 0 0);
+  --mw-color-mw-primary-dark: oklch(0.145 0 0);
+  --mw-color-mw-primary: oklch(0.269 0 0);
+  --mw-color-mw-primary-border: oklch(0.205 0 0);
+  --mw-color-mw-primary-hover: oklch(0.75 0.183 55.934);
+  --mw-color-mw-primary-active: oklch(0.837 0.128 66.29);
+  --mw-color-mw-primary-typography: oklch(0.985 0 0);
 
-  --color-secondary: oklch(0.371 0 0);
-  --color-secondary-typography: oklch(0.708 0 0);
+  --mw-color-mw-secondary: oklch(0.371 0 0);
+  --mw-color-mw-secondary-typography: oklch(0.708 0 0);
 
   --scroll-bar-background-light: oklch(0.269 0 0);
   --scroll-bar-background: oklch(0.269 0 0);

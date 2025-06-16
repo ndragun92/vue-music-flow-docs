@@ -22,14 +22,14 @@
 }
 
 :root, :host {
-    --color-primary-dark: oklch(0.13 0.028 261.692);
-    --color-primary: oklch(0.21 0.034 264.665);
-    --color-secondary: oklch(0.278 0.033 256.848);
-    --color-primary-border: oklch(0.278 0.033 256.848);
-    --color-primary-hover: oklch(0.606 0.25 292.717);
-    --color-primary-active: oklch(0.702 0.183 293.541);
-    --color-primary-typography: oklch(0.985 0 0);
-    --color-secondary-typography: oklch(0.708 0 0);
+    --mw-color-mw-primary-dark: oklch(0.13 0.028 261.692);
+    --mw-color-mw-primary: oklch(0.21 0.034 264.665);
+    --mw-color-mw-secondary: oklch(0.278 0.033 256.848);
+    --mw-color-mw-primary-border: oklch(0.278 0.033 256.848);
+    --mw-color-mw-primary-hover: oklch(0.606 0.25 292.717);
+    --mw-color-mw-primary-active: oklch(0.702 0.183 293.541);
+    --mw-color-mw-primary-typography: oklch(0.985 0 0);
+    --mw-color-mw-secondary-typography: oklch(0.708 0 0);
 
     --scroll-bar-background-light: oklch(0.984 0.003 247.858);
     --scroll-bar-background: oklch(0.279 0.041 260.031);

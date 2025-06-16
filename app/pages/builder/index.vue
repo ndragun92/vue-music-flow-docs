@@ -748,14 +748,14 @@ onMounted(async () => {
 
 const returnCSS = computed(() => {
   return {
-    "--color-primary-dark": css.value.colorPrimaryDark,
-    "--color-primary": css.value.colorPrimary,
-    "--color-secondary": css.value.colorSecondary,
-    "--color-primary-border": css.value.colorPrimaryBorder,
-    "--color-primary-hover": css.value.colorPrimaryHover,
-    "--color-primary-active": css.value.colorPrimaryActive,
-    "--color-primary-typography": css.value.colorPrimaryTypography,
-    "--color-secondary-typography": css.value.colorSecondaryTypography,
+    "--mw-color-mw-primary-dark": css.value.colorPrimaryDark,
+    "--mw-color-mw-primary": css.value.colorPrimary,
+    "--mw-color-mw-secondary": css.value.colorSecondary,
+    "--mw-color-mw-primary-border": css.value.colorPrimaryBorder,
+    "--mw-color-mw-primary-hover": css.value.colorPrimaryHover,
+    "--mw-color-mw-primary-active": css.value.colorPrimaryActive,
+    "--mw-color-mw-primary-typography": css.value.colorPrimaryTypography,
+    "--mw-color-mw-secondary-typography": css.value.colorSecondaryTypography,
     "--scroll-bar-background-light": css.value.scrollBarBackgroundLight,
     "--scroll-bar-background": css.value.scrollBarBackground,
     "--scroll-bar-slider": css.value.scrollBarSlider,

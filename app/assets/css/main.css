@@ -21,7 +21,7 @@
     }
 }
 
-:root, :host {
+.vue-music-flow {
     --mw-color-mw-primary-dark: oklch(0.13 0.028 261.692);
     --mw-color-mw-primary: oklch(0.21 0.034 264.665);
     --mw-color-mw-secondary: oklch(0.278 0.033 256.848);

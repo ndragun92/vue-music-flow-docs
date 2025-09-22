@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-const code = `:root, :host {
+const code = `.vue-music-flow {
   --breakpoint-phone: 40rem;
   --breakpoint-tablet: 80rem;
 
